@@ -9,11 +9,11 @@ Guest Writer
 УРОВЕНЬ СЛОЖНОСТИ: ПРОДВИНУТЫЙ
 
 Построение интерфейса
-----------------------
+---------------------
 
 Написать интерфейс - тоже простая задача, и решается HTML файлом со встроенным Javascript. 
-Чтобы использовать возможности WebIOPi, необходимо всего лишь включить файл webiopi.js в документ HTML.
-Создайте новый файл index.html рядом со сценарием Python:
+Чтобы использовать возможности WebIOPi, необходимо всего лишь включить файл `webiopi.js` в документ HTML.
+Создайте новый файл `index.html` рядом со сценарием Python:
 
     <html>
       <head>
@@ -31,42 +31,34 @@ Guest Writer
 
 Обратите внимание на начальный слэш при подключении webiopi.js, он указывает на то,
 что файл нужно искать в корне сервера - иначе он может и не подгрузиться.
-Я добавил пустую секцию сценария, мы запишем в ней вызовы к библиотеке WebIOPi.
-Также есть контейнер div, который будет содержать элементы управления.
+Я добавил пустую секцию `script`, в ней мы запишем вызовы к библиотеке WebIOPi.
+Также есть контейнер `div`, который будет содержать элементы управления.
 
-In the script section, we add an init function to
-build the interface using WebIOPi library. It
-contains many functions to ease creation of
-buttons that control GPIO. Here we use a basic
-button to call a different function on press and
-release. Each function calls a different macro on
-the server. Don�t forget to register the init
-function to WebIOPi. It will be called when
-everything is loaded and ready.
+В секции `script` мы записываем интерфейсную функцию `init()`.
+WebIOPi содержит множество функций для упрощения создания кнопок управления GPIO.
+Здесь мы используем простой вызов `createButton`, чтобы различать нажатие и отпускание кнопки.
+Каждая функция вызывает свою макропоследовательность на сервере.
+Не забудьте зарегистрировать функцию `init()` в WebIOPi.
+Она будет выполнена как только всё загрузится и будет готово.
 
     function init() {
       var button =
       webiopi().createButton(
-        "bt_up" , // id
-        "/\\" , // label
-        go_forward, // press
-        stop); // release
+        "bt_up" ,    // идентификатор
+        "/\\" ,      // надпись
+        go_forward,  // обработчик нажатия
+        stop);       // обработчик отпускания
         $("#box" ).append(button);
     }
 
-
-
 [page05]
 
-Be careful that webiopi() is a function and a
-reserved word that need brackets to return the
-WebIOPi object. You can use w() to short the
-webiopi() call.
+Будьте внимательны: `webiopi()` является функцией и зарезервированным словом. 
+Скобки нужно записывать обязаательно, чтобы она могла вернуть объект WebIOPi.
+Для сокращения можно использовать просто `w()`.
 
-It�s now time to start the server and enjoy the
-interface. Open a terminal in the folder you
-created Python and HTML files and execute the
-script:
+Самое время запустить сервер и полюбоваться на интерфйс.
+Откройте терминал в том каталоге, где вы создали сценария Python и HTML файл, и выполните команду:
 
     $ sudo python yourscript.py
 
