@@ -1,6 +1,6 @@
 Welcome to isssue 10,
 
-Thank you to all of those who have ordered volume one (issues 1-8). After some printing delays, the cordex binder for volume 1 has been submitted for rapid production. The final pdf files needed for printing each of the magazines are nearing completion. We expect to be releasing pdfs for printing this week. We are very grateful for your continued patience. Such delays are not expected with volume 2, since all of the articles are already in the correct format for printing.
+Спасибо всем тем, кто заказал первый том (выпуски 1-8). After some printing delays, the cordex binder for volume 1 has been submitted for rapid production. The final pdf files needed for printing each of the magazines are nearing completion. We expect to be releasing pdfs for printing this week. We are very grateful for your continued patience. Such delays are not expected with volume 2, since all of the articles are already in the correct format for printing.
 
 In this month's issue there is a great selection of hardware and software projects. We are pleased to present part 2 of the WebIOPi and backup articles, new programming langauges and our regular Scratch and Python pages. For those looking for automation solutions, there is one article with a whole range of extension boards.
 
