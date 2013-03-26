@@ -1,7 +1,6 @@
-WebIOPi - Raspberry Pi REST framework
+WebIOPi - Фреймворк REST для Raspberry Pi
 
-Роботизированная камера
-с удалённым управлением, Часть II
+Роботизированная камера с удалённым управлением, Часть II
 
 Eric PTAK
 Guest Writer
