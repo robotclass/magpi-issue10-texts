@@ -75,3 +75,103 @@ script:
 
     $ sudo python yourscript.py
 
+
+Add a webcam stream
+-------------------
+
+There are many possibilities to stream a
+webcam, which may depend on the model you
+have. In my case, I have a recent webcam which
+outputs both RAW and MJPEG formats up to
+1280x720@30fps.
+
+First, check your webcam is installed with a
+terminal:
+
+    $ lsusb
+    [...]
+    Bus 001 Device 005: ID 046d: 0825
+    Logitech, Inc. Webcam C270
+    $ ls /dev/video*
+    /dev/video0
+
+Then, to check itТs working, you can install
+uvccapture using apt-get or aptitude and take a
+single snapshot:
+
+    $ uvccapture -v
+    Using videodevice: /dev/video0
+    Saving images to: snap.jpg
+    Image size: 320x240
+    Taking snapshot every 0 seconds
+    Taking images using mmap
+    Resetting camera settings
+    Camera brightness level is 0
+    Camera contrast level is 255
+    Camera saturation level is 255
+    Camera gain level is 255
+    Saving image to: snap.jpg
+
+If uvccapture returns without error, we can
+continue to stream the webcam.
+
+I use MJPG-STREAMER, which is really easy to
+use. It gives me a 320x240@25fps pass-through
+MJPEG stream over HTTP. I tried FFMPEG but
+it takes the RAW output of the webcam to
+encode it in MJPEG with a framerate under 5fps.
+
+You can download MJPG-STREAMER at
+http://sourceforge.net/projects/mjpg-streamer/
+
+You will also need libjpeg8-dev you can install
+using aptitude/apt-get.
+
+Uncompress and build MJPG-STREAMER using
+make command. Then execute it:
+
+    $ ./mjpg_streamer -i " ./input_uvc.so
+    Цr 320x240 Цf 25" -o " ./output_http.so
+    Цn Цp 8001" &
+
+[»ль€: по кавычкам надо уточнить, чувствуетс€ что не очень корректно]
+
+Back to HTML file, add a img tag with src set to
+http://raspberrypi:8001/?action=stream replacing
+raspberrypi by your PiТs IP. You can also directly
+try the URL in your browser.
+
+    ...
+    <img
+    src="http://raspberrypi:8001/?action=stream">
+    </body>
+    </html>
+
+Conclusion
+----------
+
+With this article, you learned how to install
+WebIOPi and how to use it in your own Python
+scripts to write macros you can call from the web.
+
+The code is incomplete as it only allows to go
+forward and to stop. Just add
+left/right_backward, turn_left/right and
+go_backward functions to move the robot in all
+directions.
+
+You can download the complete code at
+http://files.trouch.com/webiopi/cambot.zip. You
+will find more information on the project wiki and
+in the examples folder of WebIOPi archive.
+
+Eric PTAK, creator of WebIOPi
+http://trouch.com
+http://code.google.com/p/webiopi/
+
+NOTE:
+Part I of this tutorial appeared in the last
+issue of the MagPi. Please read Part I
+before attempting what is shown here.
+You can download Issue 9 at:
+www.themagpi.com
