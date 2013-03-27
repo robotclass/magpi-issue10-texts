@@ -62,17 +62,14 @@ WebIOPi содержит множество функций для упрощен
     $ sudo python yourscript.py
 
 
-Add a webcam stream
--------------------
+Потоковое видео с веб-камеры
+----------------------------
 
-There are many possibilities to stream a
-webcam, which may depend on the model you
-have. In my case, I have a recent webcam which
-outputs both RAW and MJPEG formats up to
-1280x720@30fps.
+Есть много способов передачи видео, которые зависят от модели камеры. 
+В моём случае это новая модель, которая поддерживает как необработанный RAW вывод, 
+так и MJPG разрешением до 1280x720@30fps
 
-First, check your webcam is installed with a
-terminal:
+Во-первых, проверьте, что камера установленна и опознана. В терминале:
 
     $ lsusb
     [...]
@@ -81,9 +78,8 @@ terminal:
     $ ls /dev/video*
     /dev/video0
 
-Then, to check it’s working, you can install
-uvccapture using apt-get or aptitude and take a
-single snapshot:
+Затем, убедитесь что она работает. Вы можете установить uvccapture с помощью 
+apt-get или aptitude, а потом сделать одиночный снимок:
 
     $ uvccapture -v
     Using videodevice: /dev/video0
@@ -98,66 +94,54 @@ single snapshot:
     Camera gain level is 255
     Saving image to: snap.jpg
 
-If uvccapture returns without error, we can
-continue to stream the webcam.
+Если uvccapture завершиалсь без ошибок, мы можем приступить 
+к передаче видеопотока с камеры.
 
-I use MJPG-STREAMER, which is really easy to
-use. It gives me a 320x240@25fps pass-through
-MJPEG stream over HTTP. I tried FFMPEG but
-it takes the RAW output of the webcam to
-encode it in MJPEG with a framerate under 5fps.
+Я использую MJPG-STREAMER, он очень простой в использовании. 
+Он позволяет мне напрямую транслировать видео MJPEG 320x240@25fps с веб-камеры по HTTP.
+Я пробовал FFMPEG, но он работает с необработанным RAW выводом камеры, 
+а затем кодирует его в MJPEG с частотой кадров около 5fps.
 
-You can download MJPG-STREAMER at
+Вы можете загрузить MJPG-STREAMER по адресу
 http://sourceforge.net/projects/mjpg-streamer/
 
-You will also need libjpeg8-dev you can install
-using aptitude/apt-get.
+Вам также понадобится libjpeg8-dev, который можно установить через aptitude/apt-get.
 
-Uncompress and build MJPG-STREAMER using
-make command. Then execute it:
+Распакуйте и соберите MJPG-STREAMER командой make, потом запустите:
 
-    $ ./mjpg_streamer -i " ./input_uvc.so
-    –r 320x240 –f 25" -o " ./output_http.so
+    $ ./mjpg_streamer -i "./input_uvc.so"
+    –r 320x240 –f 25" -o "./output_http.so"
     –n –p 8001" &
 
-[Илья: по кавычкам надо уточнить, чувствуется что не очень корректно]
+**[Илья: по кавычкам надо уточнить, чувствуется что не очень корректно]**
 
-Back to HTML file, add a img tag with src set to
-http://raspberrypi:8001/?action=stream replacing
-raspberrypi by your Pi’s IP. You can also directly
-try the URL in your browser.
+Вернитесь в файл HTML и добавьте тег `img` с атрибутом `src` равным `http://raspberrypi:8001/?action=stream`, 
+заменив `raspberrypi` на IP адрес вашего Pi. Как вариант, можно попробовать набрать адрес прямо в браузере.
 
-    ...
-    <img
-    src="http://raspberrypi:8001/?action=stream">
-    </body>
+        ...
+        <img src="http://raspberrypi:8001/?action=stream">
+      </body>
     </html>
 
-Conclusion
+Заключение
 ----------
 
-With this article, you learned how to install
-WebIOPi and how to use it in your own Python
-scripts to write macros you can call from the web.
+В этой статье вы узнали, как установить библиотеку WebIOPi и как использовать её 
+совместно с вашими скриптами Python для создания макропоследовательностей, 
+которые можно запускать из веб-странички.
 
-The code is incomplete as it only allows to go
-forward and to stop. Just add
-left/right_backward, turn_left/right and
-go_backward functions to move the robot in all
-directions.
+Приведённый код неполный, и показывает как двигаться вперёд и останавливаться. 
+Просто добавьте функции left/right_backward, turn_left/right и go_backward, 
+чтобы робот мог двигаться во всех направлениях.
 
-You can download the complete code at
-http://files.trouch.com/webiopi/cambot.zip. You
-will find more information on the project wiki and
-in the examples folder of WebIOPi archive.
+Код полностью можно загрузить по адресу http://files.trouch.com/webiopi/cambot.zip. 
+Больше примеров можно посмотреть на вики проекта и в папке examples архива с WebIOPi
 
-Eric PTAK, creator of WebIOPi
+Eric PTAK, создатель WebIOPi
 http://trouch.com
 http://code.google.com/p/webiopi/
 
-NOTE:
-Part I of this tutorial appeared in the last
-issue of the MagPi. Please read Part I
-before attempting what is shown here.
-You can download Issue 9 at:
-www.themagpi.com
+ПРИМЕЧАНИЕ:
+Часть I этого руководства была в послденем выпуске MagPi.
+Пожалуйста, прочитайте этот выпуск прежде чем приступать к описанным здесь действиям.
+Вы можете скачать его на сайте www.themagpi.com.
