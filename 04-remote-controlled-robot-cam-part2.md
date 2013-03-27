@@ -27,7 +27,7 @@ Python script:
       </script>
       </head>
       <body>
-        <div id=”box" align="center">
+        <div id=вЂќbox" align="center">
         </div>
       </body>
     </html>
@@ -45,7 +45,7 @@ contains many functions to ease creation of
 buttons that control GPIO. Here we use a basic
 button to call a different function on press and
 release. Each function calls a different macro on
-the server. Don’t forget to register the init
+the server. DonвЂ™t forget to register the init
 function to WebIOPi. It will be called when
 everything is loaded and ready.
 
@@ -68,7 +68,7 @@ reserved word that need brackets to return the
 WebIOPi object. You can use w() to short the
 webiopi() call.
 
-It’s now time to start the server and enjoy the
+ItвЂ™s now time to start the server and enjoy the
 interface. Open a terminal in the folder you
 created Python and HTML files and execute the
 script:
@@ -95,7 +95,7 @@ terminal:
     $ ls /dev/video*
     /dev/video0
 
-Then, to check it’s working, you can install
+Then, to check itвЂ™s working, you can install
 uvccapture using apt-get or aptitude and take a
 single snapshot:
 
@@ -131,14 +131,14 @@ Uncompress and build MJPG-STREAMER using
 make command. Then execute it:
 
     $ ./mjpg_streamer -i " ./input_uvc.so
-    –r 320x240 –f 25" -o " ./output_http.so
-    –n –p 8001" &
+    вЂ“r 320x240 вЂ“f 25" -o " ./output_http.so
+    вЂ“n вЂ“p 8001" &
 
-[Илья: по кавычкам надо уточнить, чувствуется что не очень корректно]
+[РР»СЊСЏ: РїРѕ РєР°РІС‹С‡РєР°Рј РЅР°РґРѕ СѓС‚РѕС‡РЅРёС‚СЊ, С‡СѓРІСЃС‚РІСѓРµС‚СЃСЏ С‡С‚Рѕ РЅРµ РѕС‡РµРЅСЊ РєРѕСЂСЂРµРєС‚РЅРѕ]
 
 Back to HTML file, add a img tag with src set to
 http://raspberrypi:8001/?action=stream replacing
-raspberrypi by your Pi’s IP. You can also directly
+raspberrypi by your PiвЂ™s IP. You can also directly
 try the URL in your browser.
 
     ...
