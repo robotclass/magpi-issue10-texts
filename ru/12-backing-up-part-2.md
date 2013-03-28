@@ -17,36 +17,26 @@ Norman Dunbar
 
 Самый простой метод - записать образ на другую SD карточку, а потом перезагрузить Raspberry Pi с ней. Это также самый быстрый способ, и в первой части статьи мы осветили этот вопрос.
 
-This article looks at a method whereby you can take
-the backup image and pretend that it is a real device,
-an SD card if you like, and use it accordingly as if it
-was a real SD card.
-Please note, all of the following assumes that the
-backup image is uncompressed and resides on a
-local hard disc. If you have a compressed image,
-then you may wish to uncompress it if you are
-following along.
-The first step, as root – as ever – is to determine
-where the partitions begin. Because we have an
-image copy of the SD card, we can look at the file
-itself and see the partition table within. If you wish to
-run all the following commands as the Pi user, the
-please prefix each one with sudo. Otherwise, make
-life simple and type:
-    $ sudo sh
-This command will start a root shell for you, and there
-will be no need to prefix the commands with sudo.
-First list the backup image to see where the partitions
-begin and the sizes of the sectors. Fdisk reports sizes
-in sectors, but handily displays the sector size at the
-top.
-The command to list the partition details is:
-    $ fdisk Rpi_8gb_backup. img
+В этой статье мы рассмотрим метод, который позволит вам работать с образом диска, как будто он был настоящей SD картой.
 
-    Welcome to fdisk (uti l-linux 2. 21. 2).
-    . . .
+Пожалуйста, обратите внимание, что всё нижеизложенное предполагает, что образ диска несжатый и находится на локальном жёстком диске. Если у вас сжатый образ, вам может понадобиться распаковать его.
+
+Первым делом под пользователем root (как и всегда) необходимо определить место начала разделов. Так как у нас есть копия образа SD карты, мы можем посмотреть на сам файл и узнать, где начинается таблица разделов. Если вы хотите выполнять все команды как обыеновенный пользователь Pi, дописывайте в начало команд `sudo`. Можно немного упростить себе жизнь и набрать:
+
+    $ sudo sh
+
+Эта команда запустит консоль root, и не нужно будет добавлять `sudo` к началу команд.
+
+В первую очередь, просмотрите образ диска, чтобы узнать, где начинаются разделы и какого размера секторы. Fdisk отображает размеры в количестве секторов, но размер сектора удобно посмотреть в начале вывода.
+
+Команда для отображения структуры разделов выглядит так:
+
+    $ fdisk Rpi_8gb_backup.img
+
+    Welcome to fdisk (util-linux 2.21.2).
+    ...
     Command (m for help): p
-    Disk Rpi_8gb_backup. img: 7948 MB, 7948206080 bytes
+    Disk Rpi_8gb_backup.img: 7948 MB, 7948206080 bytes
     255 heads, 63 sectors/track, 966 cylinders, total 15523840 sectors
     Units = sectors of 1 * 512 = 512 bytes
     Sector size (logical/physical): 512 bytes / 512 bytes
