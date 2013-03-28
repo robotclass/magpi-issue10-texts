@@ -11,29 +11,16 @@ Lloyd Seaton
 ------------
 В этой статье описаны относительно сложные конструкторские проекты, которые не рекомендуются к изучению новичкам. К ним нет готовых наборов деталей, наоборот, вам придётся покупать их самим в любимых магазинах радиодеталей. Впрочем, список нужных компонентов и возможных магазинов всегда прилагается.
 
+Сила колелктива
+---------------
+
 > Печатные платы можно купить дешевле, если вы объединитесь в группы по 2-3 и более человека.
 
-The Power Of Groups
--------------------
-The economics of component purchasing are
-greatly influenced by the quantities involved. For
-these projects, participants should be able to
-achieve substantial savings if they can band
-together with like-minded individuals through
-school, Raspberry Jam or other organisations to
-combine their purchases.
+Стоимость электронных компонентов во многом зависит от закупаемого количества. Для этих проектов, участники могут неплохо сэкономить, если объединятся для совместных покупок с единомышленниками в школе, Raspberry Jam или других сообществах.
 
-Printed Circuit Boards (PCBs)
------------------------------
-Most constructors shrink from the challenge of
-designing and producing a circuit board with any
-fineness of detail or complexity. That is the
-reason for this series of articles. By grouping
-together a "cocktail" of projects with a variety of
-PCB designs, the PCBs can be purchased more
-economically, especially if participants combine
-into groups of 2 or 3 (or more) to arrange their
-purchases.
+Печатные платы
+--------------
+Многие конструкторы избегают разработки и производства печатных плат любой детализации или сложности, - это причина этого цикла статей. Если мы соберём "коктейль" из проектов со множеством дизайнов печатных плат, они могут быть произведены с меньшими затратами, особенно если конструкторы участники проектов объединятся, чтобы разделить расходы.
 
 PCB Manufacturing Strategy
 --------------------------
