@@ -22,8 +22,9 @@ Lloyd Seaton
 --------------
 Многие конструкторы избегают разработки и производства печатных плат любой детализации или сложности, - это причина этого цикла статей. Если мы соберём "коктейль" из проектов со множеством дизайнов печатных плат, они могут быть произведены с меньшими затратами, особенно если конструкторы участники проектов объединятся, чтобы разделить расходы.
 
-PCB Manufacturing Strategy
---------------------------
+
+Стратегия производства печатных плат
+------------------------------------
 The author became involved in the design and
 construction of small printed circuit assemblies
 (PCAs) late in 2011 when he decided to develop
@@ -47,32 +48,26 @@ project PCBs can now be fitted on each
 manufactured PCB, halving the PCB unit price
 again to about $7.50, a very satisfactory price.
 
-The Projects
-------------
-During the coming months it is intended that the
-following PCB projects will be covered:
+Список проектов
+---------------
+В течении следующих месяцев планируется осветить следующие проекты на печатных платах:
+
 1. Power I/O
 2. Tiny I/O
 3. MegaPower
 4. Pi Bridge ICSP Interconnect
 5. Battery Load Manager 85
 6. BatteryLoadManager+
-Brief descriptions of each project follow.
+
+Краткое описание каждого из них приведено ниже.
 
 Power I/O
 ---------
-This PCB can include a hexadecimal rotary
-switch, 7 Darlington drivers with indicator LEDs
-and buffered access to the Pi's GPIO ports. A
-switching regulator circuit can optionally be
-included to allow the Pi to operate from a DC
-source of 7 to 20V.
+Включает в себя шестнадцатеричный круговой переключатель, 7 драйверов Дарлингтона со светодиодными индикаторами, и обеспечивать буферизованный доступ к GPIO портам Pi. Дополнительно можно включить импульсный регулятор напряжения, чтобы Pi могла работать от истоичника постоянного напряжения 7-20В.
 
 Tiny I/O
 --------
-This PCB can include an ATtiny84
-microcontroller, 7 Darlington drivers with
-indicator LEDs and buffered GPIO access.
+Эта плата может содержать микроконтроллер ATtiny84, 7 драйверов Дарлингтона со светодиодными индикаторами, и будет обеспечивать буферизованный доступ к GPIO.
 
 MegaPower
 ---------
