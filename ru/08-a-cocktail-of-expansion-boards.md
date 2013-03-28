@@ -1,27 +1,17 @@
-TRY A COCKTAIL OF PROJECTS
-==========================
+Попробуйте коктейль проектов
+============================
 
-This is the first of a series of articles intended to assistRaspberry
-Pi users to construct and use expanded I/O capabilities of theirPi.
+Перед вами - первая статья из серии, призванной помочь пользователям Raspberry Pi собирать платы расширения и полностью использовать возможности ввода-вывода их RPi.
 
-DIFFICULTY : ADVANCED
+Уровень сложности: продвинутый
 
 Lloyd Seaton
 
-Suitability
------------
-These are relatively advanced constructional
-projects and are not recommended for beginners.
-There are no kits of parts being offered. Instead,
-participants will need to purchase their own
-components from their preferred electronic
-component suppliers. However, lists of
-components and suggested suppliers will be
-provided.
+Применимость
+------------
+В этой статье описаны относительно сложные конструкторские проекты, которые не рекомендуются к изучению новичкам. К ним нет готовых наборов деталей, наоборот, вам придётся покупать их самим в любимых магазинах радиодеталей. Впрочем, список нужных компонентов и возможных магазинов всегда прилагается.
 
-> PCBs can be purchased more economically...
-> if participants combine into
-> groups of 2 or 3 (or more)
+> Печатные платы можно купить дешевле, если вы объединитесь в группы по 2-3 и более человека.
 
 The Power Of Groups
 -------------------
