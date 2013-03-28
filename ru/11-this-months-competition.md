@@ -1,31 +1,19 @@
-March competition
-=================
+Мартовский конкурс
+==================
 
-Once again The MagPi and PC Supplies Limited are proud to announce yet
-another chance to win some fantastic Raspberry Pi goodies!
+И снова The MagPi и PC Supplies Limited рады объявить ещё один шанс выиграть немного вкусняшек для Raspberry Pi!
 
-This month there are three prizes!
-The first prize winner will receive a new
-51 2Mb Raspberry Pi Model B plus a
-PCSL Raspberry Pi case!
-The second and third prize winners will
-receive a PCSL LCD VESA mount case.
-For a chance to take part in this month's
-competition visit:
-http://www.pcslshop.com/info/magpi
-Closing date is 20th March 201 3.
-Winners will be notified in next month's
-magazine and by email. Good luck!
+В этом месяце будет три приза. Победитель, получивший первый приз, получит новую Raspberry Pi 512Mb Model B + корпус PCSL! Второй и третий приз - монтажный корпус VESA PCSL LCD.
 
-To see the large range of PCSL brand Raspberry Pi accessories visit
-http://www.pcslshop.com
+Чтобы принять участие в розыгрыше этого месяца, посетите http://www.pcslshop.com/info/magpi. Дата окончания - 20 марта 2013г. Победители будут уведомлены о выйгрыше в следующем выпуске журнала и по электронной почте. Удачи!
+
+Познакомиться с широким ассортиментом аксессуаров PCSL для Raspberry Pi, посетите http://www.pcslshop.com
 
 
-February's Winners!
+Победители февраля!
 ===================
 
-The winner of the new pre-assembled Element 1 4 Gertboard is Nicolas Penin
-(Mulhouse, France).
-The 2nd and 3rd prize winners of the PCSL Raspberry Pi case are Mervyn Burnett
-(Maryport, UK) and Beverley Skea (Liverpool, UK).
-Congratulations. We will be emailing you soon with details of how to claim your prizes!
+Первое место и собранную GetBoard от Element 14 получает Nicolas Penin из Mulhouse, Франция.
+Второе и третье место заняли Mervyn Burnett из Maryport, Соединённое Королевство, и Beverley Skea Liverpool, Соединённое Королевство, - они получили по корпусу PCSL для Raspberry Pi.
+
+Наши поздравления! Скоро вы получите письма с инструкциями, как забрать ваши призы!
