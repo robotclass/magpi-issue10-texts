@@ -1,40 +1,21 @@
-Backing up - part 2
-===================
+Резервное копирование - Часть II
+================================
 
 Norman Dunbar
 
-DIFFICULTY : MEDIUM
+Уровень сложности: Средний.
 
-In part 1, I demonstrated how you could make a
-backup of your Raspberry Pi's SD card. In part 2, I
-shall demonstrate how you may check that the
-backup worked and also, I shall show you some of
-the "fun" that can be had using the backup image as
-a disc drive. You will see how to modify files within
-the backup image itself. When you subsequently
-write the image to an SD card, all your changes will
-be present.
-Again, this is simple to do on a Linux computer,
-however, for Windows users it's not easy at all.
-Windows users should consider using Linux Live CD
-or running Linux in a VirtualBox VM (or similar) if you
-want to follow along.
+* * *
 
-Checking the Backup File
-----------------------------
-Making a backup is simple, normally, but how do you
-know that the backup has worked? It is not fun when
-you have a trashed Raspberry Pi SD card and you
-discover that your backup is not able to be restored.
-You have to begin again from scratch by building a
-new default distribution and reinstalling and
-configuring all your software. Of course, none your
-own files will be able to be restored. So you should
-always check your backups work.
-The simplest method of checking is to write the image
-to a spare SD card and plug that in to the Rasberrp Pi
-and reboot it. This is also about the quickest method,
-and the part 1covered this in some detail.
+В первой части я показал, как сделать резервную копию SD карты вашей Raspberry Pi. Сейчас же мы рассмотрим, как можно проверить правильность резервной копии, а также я покажу несколько трюков, которые можно делать с резервной копией как с диском. Вы узнаете, как изменять файлы в резервной копии напрямую, - так, чтобы все изменения отразились при записи образа на SD карточку.
+
+Напомню, что все действия легко выполняются в Linux, для пользователей Windows всё будет гораздо сложнее. В таком случае следует подумать о Live CD с Linux или установке Linux в виртуальную машину VirtualBox (или любую другую).
+
+Проверка файла резервной копии
+------------------------------
+Обычно, создание резервной копии - несложая задача, но как убедиться в том, что она правильная? Ситуация, когда SD карточка полетела, а резервная копия оказывается нерабочей, совсем не весёлая - придётся начинать всё сначала, устанавливать дистрибутив, программы, с нуля настраивать конфигурацию. И конечно же, ни один из ваших файлов не будет подлежать восстановлению. Что в итоге? Всегда нужно проверять правильность резервной копии.
+
+Самый простой метод - записать образ на другую SD карточку, а потом перезагрузить Raspberry Pi с ней. Это также самый быстрый способ, и в первой части статьи мы осветили этот вопрос.
 
 This article looks at a method whereby you can take
 the backup image and pretend that it is a real device,
