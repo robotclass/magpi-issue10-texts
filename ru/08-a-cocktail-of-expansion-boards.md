@@ -88,11 +88,8 @@ supplies.
 
 Pi Bridge ICSP Interconnect
 ---------------------------
-This little PCB (0.8" x 0.6") provides a convenient
-way to connect the Raspberry Pi for
-programming of the Battery Load Manager 85,
-BatteryLoadManager+ or some Arduino boards
-without the use of jumper wires.
+Маленькая печатная плата (2x1.5 см) позволяет Raspberry Pi подключиться для программирования Battery Load Manager 85,
+BatteryLoadManager+ или некоторых плат Arduino, без использования соединительных проводов..
 
 Battery Load Manager 85
 -----------------------
@@ -155,12 +152,6 @@ the order is then a straight-forward procedure
 whose full description can be found on the
 information blog.
 
-Information Blog
-----------------
-An Internet blog has been established at
-picocktails.blogspot.com to provide an ongoing
-information resource for constructors of
-these projects. Links to the design
-documentation, cocktail files, photo albums, test
-programs etc will be readily accessible from the
-blog.
+Информационный блог
+-------------------
+В Интернете открылся блог picocktails.blogspot.com, где вы можете почерпнуть актуальную информацию для конструкторов представленных проектов: ссылки на чертежи, файлы, фотоальбомы, тестовые программы и многое другое.
