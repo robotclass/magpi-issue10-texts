@@ -19,3 +19,7 @@
 
 После этого генерируем PDF - и получаем русскоязычную версию журнала.
 
+
+
+Подсказка по MarkDown формату:
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
