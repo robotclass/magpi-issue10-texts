@@ -23,23 +23,12 @@ powerful and highly suited to an agile
 development environment. Applications of any
 complexity can be rapidly developed in small
 incremental changes without waiting around for
-the code to build;
-for instance the
-whole of the
-Charm
-distribution can
-be rebuilt in well
-under a minute!
+the code to build; for instance the whole of the
+Charm distribution can be rebuilt in well under a minute!
 
-Here I would like
-to cover the
-practical aspects
-of using Charm. I
-hope this will
-encourage
-people to take up
-writing Charm
-programs for
+Here I would like to cover the practical aspects
+of using Charm. I hope this will encourage
+people to take up writing Charm programs for
 themselves and join the over 1,200 people from
 around the world that have visited the Charm
 web site so far.
@@ -56,23 +45,12 @@ recommend updating to the latest version
 the Gnu Public License as a simple zip file from
 the Charm website charm.qu-bit.co.uk. There
 you can read more, get in touch with me through
-the Charm forum
-and view
-screenshots of
-the various
-Charm demos, of
-which the most
-fun is Decapedes,
-a shoot'em up
-somewhat akin to
-Pacman with
-some nice sound
-and graphics.
+the Charm forum and view screenshots of the various
+Charm demos, of which the most fun is Decapedes,
+a shoot'em up somewhat akin to Pacman with
+some nice sound and graphics.
 
-You may
-optionally wish to
-utilise the vector
-floating point
+You may optionally wish to utilise the vector floating point
 (VFP) capabilities of the ARM 11 chip which is
 off by default for people running Charm on
 emulators or older variants of the ARM chip. This
