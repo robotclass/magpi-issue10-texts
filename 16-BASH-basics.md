@@ -33,7 +33,7 @@ printed by typing,
 
     echo $SHELL
 
-The default shell is set for each user within /etc/passwd or
+The default shell is set for each user within `/etc/passwd` or
 via NIS or LDAP. For example,
 
     grep pi/etc/passwd
@@ -73,10 +73,10 @@ Then the file should be made executable
 
     chmod u+x script.sh
 
-Finally, it is possible to type ./script.sh to execute the script.
+Finally, it is possible to type `./script.sh` to execute the script.
 
 Use `nano` (documented in the issue 3 C cave article) to
-create a hello.sh file containing:
+create a `hello.sh` file containing:
 
     #!/bin/bash
     # A simple script to print a string.
@@ -100,10 +100,10 @@ strings,
 
 
     # Print "Hello Joe" , replace Joe with Fred.
-    echo "Hello Joe" | sed ' s/Joe/Fred/g'
+    echo "Hello Joe" | sed 's/Joe/Fred/g'
     # Replace Hello with Goodbye too.
-    echo "Hello Joe" | sed ' s/Joe/Fred/g' | sed
-    ' s/Hello/Goodbye/g'
+    echo "Hello Joe" | sed 's/Joe/Fred/g' | sed
+    's/Hello/Goodbye/g'
 
 In this example the sed command is used to replace a part
 of the string. The sed command (stream editor) is a
@@ -117,7 +117,7 @@ The standard output from a program can be directed to a
 file or a device,
 
     # Print a string to a fi le
-    echo "This is a fi le" > file.txt
+    echo "This is a file" > file.txt
     # Print the contents of the file on the screen
     cat file.txt
 
@@ -126,7 +126,7 @@ standard output to the file. To append to a file without
 truncation, the ">>" operator should be used.
 
 If a command produces a lot of output which is not needed,
-the output can be sent to /dev/null instead:
+the output can be sent to `/dev/null` instead:
 
     # Run a command, but throw away the output
     rm /tmp &> /dev/null # This command will fail.
@@ -202,12 +202,13 @@ statements:
 A summary table of logic tests which can be applied to a
 variable are given below,
 
-Syntax Meaning
--z string True if length of *string* is zero
--n string True if the length of *string* is non-zero
-var1 == var2 True if equal
-var1 != var2 True if not equal
-(ilya: table todo)
+
+| Syntax           | Meaning    
+|------------------|-------------
+| -z *string*      | True if length of *string* is zero
+| -n *string*      | True if the length of *string* is non-zero
+| *var1* == *var2* | True if equal
+| *var1* != *var2* | True if not equal
 
 
 The logic comparisons of equal and not equal can also be
@@ -284,7 +285,7 @@ example,
 
     dir_list=$(ls )
 
-fills the variable dir_list with the text returned by the ls
+fills the variable `dir_list` with the text returned by the `ls`
 command. The syntax $() can be directly used as a
 variable. This can be useful within a for loop,
 
