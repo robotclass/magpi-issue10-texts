@@ -46,25 +46,15 @@ Norman Dunbar
     /BU/Rpi_8gb_backup. img1 8192 122879 57344 c W95 FAT32 (LBA)
     /BU/Rpi_8gb_backup. img2 122880 15523839 7700480 83 Linux
 
-The output from this command is shown at the top of
-the following page.
-When the utility has loaded, we use the 'p' command
-to print the current partition table. This is the
-command that shows details of the current partitions,
-where they are located and how big they are.
-We can see from the line starting with ‘Units’ or
-‘Sector size’ that a sector is 512 bytes. We can also
-see that our two partitions start at sectors 8,192 and
-122,880. Multiplying these start sectors by 512 gives
-the start position in bytes. This works out at
-4,194,304 and 62,914,560 bytes respectively,
-however, we don't really need these latter figures as
-Linux will calculate it for us.
-On your Raspberry Pi, the first partition is normally
-mounted at /boot while the second is the root (/)
-mount point.
-To check these, without needing access to the Pi, we
-need to create a pair of mount points, as follows:
+Вывод этой команды представлен в начале следующей страницы.
+
+Когда программа загружена, мы используем команду 'p' чтобы напечатать текущую таблицу разделов. Эта команда показывает сведения о разделах, их расположении и размере.
+
+Также из строчки, начинающейся с 'Units' или 'Sector size' мы узнаём размер сектора - 512 байт. Мы также можем увидеть, что два наших раздела начинаются с секторов 8192 и 122880. Умножая эти номера на 512, получим начало каждого раздела в байтах, будет 4194304 и 62914560 байт соотвественно. На самом деле нам не нужно считать смещения в байтах, так как Linux сделает это за нас.
+
+На Raspberry Pi первый раздел обычно монтируется как `/boot`, а второй - как корневой раздел `/`.
+
+Чтобы проверить это без Pi, нам нужно сделать две точки монтирования:
 
     $ mkdir /mnt/root /mnt/boot
     $ chmod a=rwx /mnt/root /mnt/boot
