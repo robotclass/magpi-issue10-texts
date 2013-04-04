@@ -59,38 +59,20 @@ Norman Dunbar
     $ mkdir /mnt/root /mnt/boot
     $ chmod a=rwx /mnt/root /mnt/boot
 
-The two commands above only requires to be
-executed once, the very first time we attempt this
-exercise. Next, and on any subsequent occasion
-when we do this, the following two commands should
-be typed - on one line each - to mount the backup
-image's two partitions as pseudo disc drives:
+Эти две команды нужно выполнить один раз. В дальнейшем, чтобы примонтировать два раздела образ диска в псевдо-диск, нужно будет выполнить:
 
-    $ mount -t vfat -o loop, offset=$((8192 * 512))
-    /BU/Rpi_8gb_backup. img /mnt/boot
-    $ mount -t ext4 -o loop, offset=$((122880 *
-    512)) /BU/Rpi_8gb_backup. img /mnt/root
+    $ mount -t vfat -o loop, offset=$((8192 * 512)) /BU/Rpi_8gb_backup. img /mnt/boot
+    $ mount -t ext4 -o loop, offset=$((122880 * 512)) /BU/Rpi_8gb_backup. img /mnt/root
 
-The above creates a couple of mount points
-(directories) and then mounts the first partition within
-the image file as a vfat file system on /mnt/boot and
-then mounts the second partition as an ext4 file
-system on /mnt/root.
-The first two commands to create the mount points
-and set the permissions on them are only required
-once, the first time you carry out this exercise.
-You can now see the files by opening a file manager
-and looking at the /mnt/boot and /mnt/root directories
-– you should see your various files as if you were
-looking on your Raspberry Pi.
-At least you are now sure that your image file could
-be restored to an SD card, and that it is at least
-mountable - so it should be ok for future use if you
-ever require to restore a corrupted card. However,
-with the card image currently mounted as a pseudo
-drive on your Linux laptop, you can treat it exactly as
-if it was a real drive, and edit files, create new ones,
-delete ones you no longer require, and so on.
+В результате будет создано несколько точек монтирования (директорий), а затем первый раздел с файловой системой `vfat` будет подмонтирован в `/mnt/boot`, а второй раздел ext4 - в `/mnt/root`.
+
+Первые две команды для создания директорий нужно выполнить только один раз в самом начале.
+
+Теперь можно открыть файловый менеджер и посмотреть содержимое `/mnt/boot` и `/mnt/root` - вы должны увидеть множество файлов, точно как если бы видели их из Raspberry Pi.
+
+В итоге, мы по меньшей мере удостоверились, что файл образа может быть восстановлен на SD карту и он может подмонтироваться - в дальнейшем в случае порчи SD карточки образ можно использовать и всё будет хорошо.
+
+Таким образом, теперь подмонтированный образ карточки можно воспринимать как настойщий диск, редактировать файлы, создавать новые, удалять ненужные - и так далее.
 
 Edit a file
 --------------
