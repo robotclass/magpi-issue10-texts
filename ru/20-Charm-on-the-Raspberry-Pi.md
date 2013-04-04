@@ -1,13 +1,11 @@
-An Intoduction to
-CHARM
+Введение в CHARM
 
-Charm on the Raspberry Pi
-=========================
+Charm на Raspberry Pi
+=====================
 
-Peter Nowosad
-Guest Writer
+Peter Nowosad, Guest Writer
 
-DIFFICULTY : ADVANCED
+Уровень сложности: Продвинутый
 
 This and follow on articles are intended to
 promote interest in and understanding of the
@@ -217,8 +215,6 @@ integer size (Hint: return a real from a factorial
 and use .float instead of .num to output it).
 
 
-Next Time
----------
-
-Next time I intend to cover Charm data types,
-variables, strings and scoping.
+Что дальше?
+-----------
+В следующий раз я расскажу про типы данных Charm, переменные, строки и области видимости.
