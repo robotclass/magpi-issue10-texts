@@ -71,20 +71,7 @@ Tiny I/O
 
 MegaPower
 ---------
-This PCB is for people who are not interested in
-using the Raspberry Pi's GPIO, preferring
-instead to have an ATmega328 microcontroller
-with 4 indicator LEDs, 7 Darlington drivers and
-operating at 5V for broad interfacing capability.
-The board can serve as a close companion to a
-Raspberry Pi or operate on its own. When
-coupled with a Raspberry Pi, the MegaPower's
-on-board switching regulator circuit can power
-itself and the Pi from a 7 ~ 20V DC source. If not
-required, the switching power supply
-components can be omitted, leaving the
-ATmega328 to rely on the Pi's regulated power
-supplies.
+Эта плата подойдёт тем людям, которые предпочтут микроконтроллер ATmega328 с 4 индикаторными светодиодами, 7 драйверами Дарлингтона и питанием 5В (для совместимости по напряжению) вместо GPIO. Это устройство может работать как в тесной интеграции с Raspberry Pi, так и само по себе. Будучи сопряжённым с RaspberryPi, импусльный источник питания MegaPower может обеспечивать саму MegaPower, и Raspberry Pi от источника постоянного тока 7-20В. Если это не нужно, элементы источника питания можно опустить, тогда микроконтроллер MegaPower будет питаться от Raspbery Pi.
 
 Pi Bridge ICSP Interconnect
 ---------------------------
