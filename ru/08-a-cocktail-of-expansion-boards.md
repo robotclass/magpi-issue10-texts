@@ -9,44 +9,26 @@ Lloyd Seaton
 
 Применимость
 ------------
-В этой статье описаны относительно сложные конструкторские проекты, которые не рекомендуются к изучению новичкам. К ним нет готовых наборов деталей, наоборот, вам придётся покупать их самим в любимых магазинах радиодеталей. Впрочем, список нужных компонентов и возможных магазинов всегда прилагается.
+В этой статье описаны относительно сложные проекты, которые не рекомендуются к реализации новичкам. К ним нет готовых наборов деталей, наоборот, вам придётся покупать их самостоятельно. Впрочем, списки нужных компонентов и магазинов всегда прилагается.
 
-Сила колелктива
----------------
+Вместе дешевле
+--------------
 
 > Печатные платы можно купить дешевле, если вы объединитесь в группы по 2-3 и более человека.
 
-Стоимость электронных компонентов во многом зависит от закупаемого количества. Для этих проектов, участники могут неплохо сэкономить, если объединятся для совместных покупок с единомышленниками в школе, Raspberry Jam или других сообществах.
+Радиодетали обойдутся дешевле, если покупать их помногу. Вы можете порядочно сэкономить, если объединитесь с единомышленниками в школе или своём сообществе любителей Raspberry Pi.
 
-Печатные платы
---------------
-Многие конструкторы избегают разработки и производства печатных плат любой детализации или сложности, - это причина этого цикла статей. Если мы соберём "коктейль" из проектов со множеством дизайнов печатных плат, они могут быть произведены с меньшими затратами, особенно если конструкторы участники проектов объединятся, чтобы разделить расходы.
-
+О платах
+--------
+Многие избегают разработки собственных схем плат расширений, и поэтому я решил написать этот цикл статей. Если собрать "коктейль" из проектов с готовыми разработками, дело остаётся лишь за реализацией - так можно сэкономить время и деньги. Особенно если объединиться и сэкономить на деталях.
 
 Стратегия производства печатных плат
 ------------------------------------
-The author became involved in the design and
-construction of small printed circuit assemblies
-(PCAs) late in 2011 when he decided to develop
-an electronic supervisory circuit to manage solar
-powered pumps on farms and elsewhere. It soon
-became apparent that the cost of PCBs needed
-to reduce and a decision was made to use the
-Mini Board Pro service of ExpressPCB and to
-design the project PCBs such that multiple
-(initially 2, later 3) project PCBs could fit on each
-of the 3 manufactured PCBs per order. The
-project PCBs are designed to be separated by
-hacksaw prior to assembly. This strategy
-achieved a unit price of about $15 Australian per
-project PCB, seemingly a reasonable price.
-More recently, the supervisory circuit has been
-redesigned (with the help of a Raspberry Pi) to
-employ an ATtiny85 microcontroller instead of
-the previously pure analogue circuitry such that 6
-project PCBs can now be fitted on each
-manufactured PCB, halving the PCB unit price
-again to about $7.50, a very satisfactory price.
+Автор статьи начал участвовать в разработке малых сборок печатных плат в конце 2001, когда он решил разрабатывать контроллер помп для хозяйств с питанием на солнечных батареях.
+
+Вскоре стало очевидно, что стоимость производства плат нужно уменьшать, и было принято решение воспользоваться услугой Mini Board Pro от ExpressPCB, а ещё проектировать платы таким образом, чтобы на одном фабричном листе умещалось несколько (в начале 2-3) плат. После получения заказа лист разрезался, а затем производилась непосредственно сборка. Эта стратегий позволила снизить стоимость производства каждой платы до 15A$, это вполне приемлимая цена.
+
+Недавно был произведён редезайн контроллера (с помощью Raspberry Pi), и теперь он работает на микроконтроллере ATtiny85 вместо чисто аналоговой схемы. Это позволило уместить 6 плат на одном листе и ещё больше снизить цену до 7.50$, это просто замечательно.
 
 Список проектов
 ---------------
@@ -76,7 +58,7 @@ MegaPower
 Pi Bridge ICSP Interconnect
 ---------------------------
 Маленькая печатная плата (2x1.5 см) позволяет Raspberry Pi подключиться для программирования Battery Load Manager 85,
-BatteryLoadManager+ или некоторых плат Arduino, без использования соединительных проводов..
+BatteryLoadManager+ или некоторых плат Arduino, без использования соединительных проводов.
 
 Battery Load Manager 85
 -----------------------
@@ -124,20 +106,9 @@ happen to be equal in size; one for the Tiny I/O
 project, the other for MegaPower. There are
 guide lines to assist with the hacksawing.
 
-Procedure For Ordering PCBs
----------------------------
-Before ordering PCBs it is necessary that you
-first install the ExpressPCB free CAD software on
-a PC with Internet access. The
-ExpressPCB.com software is a free download
-from the Internet and is intended for Windows
-machines but the author uses it with Wine on a
-Linux PC quite satisfactorily. You then need to
-choose your cocktail file, download the file and
-open it with the ExpressPCB software. Placing
-the order is then a straight-forward procedure
-whose full description can be found on the
-information blog.
+Процедура заказа производства печатных плат
+-------------------------------------------
+Прежде чем заказать печатные платы, вам необходимо установить ExpressPCB CAD на компьютере с доступом в Интернет. Программа бесплатная и предназначена для Windows, но работает и в Linux под Wine. Вам нужно выбрать файл cocktail, скачать и открыть его в ExpressPCB. Дальнейшая процедура простая и хорошо описана в информационном блоге.
 
 Информационный блог
 -------------------
