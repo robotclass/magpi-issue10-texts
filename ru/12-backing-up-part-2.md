@@ -74,39 +74,21 @@ Norman Dunbar
 
 Таким образом, теперь подмонтированный образ карточки можно воспринимать как настойщий диск, редактировать файлы, создавать новые, удалять ненужные - и так далее.
 
-Edit a file
---------------
-If, for example, you were about to restore this backup
-image to a second SD card, but for use in a Pi
-connected to a TV that has VGA input rather than
-HDMI, you could edit the config.txt file, in the /boot
-partition, inside the image before you write it to the
-new SD card.
-As you have the image's first partition, the one
-normally mounted at /boot, mounted on your laptop
-as /mnt/boot, then all you have to do is edit
-/mnt/boot/config.txt using your favourite editor, and
-set hdmi_group and hdmi_mode to 1 and save the
-file.
-When you subsequently write this backup image to a
-new card, it will be ready to run on a Pi connected to
-your VGA TV.
-Why would you want to do this? Well, You might have
-a couple of Pis running identical setups, but one is in
-the main computer room attached to an HDMI TV or
-monitor, and another in the Kids bedroom, connected
-to a VGA TV or monitor. This method will save you
-having to backup one of the devices, write the SD
-card for the other, boot it up attached to the "wrong"
-display, change the config and then boot it on the
-correct display.
-Obviously, if you have configured both of the devices
-to have a static IP address when connected to your
-network, you will have to edit /etv/network/interfaces
-to suit the device which is having the SD card reimaged,
-otherwise you will end up with two devices
-runing the same IP address, which can only result in
-problems.
+Редактирование файлов
+---------------------
+Предположим, вам нужно залить образ на SD карту, но вместо RCA будете использовать HDMI подключение. Но прежде, вам нужно отредактировать файл `config.txt` в каталоге `/boot` внутри образа.
+
+Так как первый раздел образа, тот что в Raspberry Pi значится как `/boot`, примонтирован на компьютере как `/mnt/boot`, то всё что остаётся сделать, это поправить `/mnt/boot/config.txt` вашим любимым текстовым редактором:
+
+    hdmi_group = 1
+    hdmi_mode  = 1
+
+После того как вы запишете образ на SD карту, RPi будет работать с HDMI.
+
+Зачем это может пригодиться? Ну, например если у вас несколько RPi с одинаковыми настройками, но один подключен к HDMI TV, а другой - к VGA. Такое редактирование файлов позволит вам хранить только копию карты с одного устройства, а для другого останется просто "поправить дисплей".
+
+Естественно, не забудьте отредактировать `/etc/metwork/interfaces` если ваши RPi настроены со статическим IP адресом.
+
 
 Restore a single file
 -----------------------------
