@@ -121,18 +121,18 @@ To avoid this happening, and to do some other
 interesting things, there are various options we
 can use when making our file stream objects:
 
-+-------------+------------------------------+----------------------------+
-|   Option    |         Description          |           Notes            |
-+-------------+------------------------------+----------------------------+
-| ios::app    | Appends to an existing file, |                            |
-|             | instead of overwriting it.   |                            |
-| ios::in     | Gets input from a file.      | Default when used          |
-|             |                              | with ifstream(filename)    |
-| ios::out    | Outputs to a file            | Default when used          |
-|             |                              | with ofstream(filename)    |
-| ios::binary | Reads the file in as binary, |                            |
-|             | instead of text.             |                            |
-+-------------+------------------------------+----------------------------+
+    +-------------+------------------------------+----------------------------+
+    |   Option    |         Description          |           Notes            |
+    +-------------+------------------------------+----------------------------+
+    | ios::app    | Appends to an existing file, |                            |
+    |             | instead of overwriting it.   |                            |
+    | ios::in     | Gets input from a file.      | Default when used          |
+    |             |                              | with ifstream(filename)    |
+    | ios::out    | Outputs to a file            | Default when used          |
+    |             |                              | with ofstream(filename)    |
+    | ios::binary | Reads the file in as binary, |                            |
+    |             | instead of text.             |                            |
+    +-------------+------------------------------+----------------------------+
 
 These can be added as options when you first make the stream. For example:
 
