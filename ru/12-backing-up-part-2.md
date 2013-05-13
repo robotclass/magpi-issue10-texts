@@ -90,72 +90,41 @@ Norman Dunbar
 Естественно, не забудьте отредактировать `/etc/metwork/interfaces` если ваши RPi настроены со статическим IP адресом.
 
 
-Restore a single file
------------------------------
-This method of mounting a disc image as a device is
-useful for times when you manage to delete a file,
-accidentally of course, on your Pi, but you know that
-you have a backup. If the Pi is on your network, you
-can simply mount the backup image as above, locate
-the file and check that it is the one you want, then use
-scp or sftp to copy the file to your Pi, as demonstrated
-below:
+Восстановление одиночного файла
+-------------------------------
+Следующий метод, монтирование образа дискакак устройства, полезен тогда, когда вы случайно удалили файл на Pi, но вы знаете что есть резервная копия. Если Pi подключен к сети, вы можете просто примонтировать образ диска как мы делали раньше, найти нужный файл и скопировать его на Pi через SCP или FTP:
 
     $ mount -t ext4 -o loop, offset=$((122880 *
     512)) /BU/Rpi_8gb_backup. img /mnt/root
     $ cd /mnt/root/home/pi
     $ scp Lost_fi le. txt pi@raspberrypi :
 
-You will be prompted for pi's password, and then the
-file will be copied over to the Pi user's home directory
-on your Raspberry Pi.
-So there you have it, how to mount your backup file
-on the backup computer to check that it is ok, and as
-a bonus, how to extract a file (or files) for an
-individual recover. What else can we do?
+После того, как вы введёте пароль от Pi, файл будет скопирован в домашнюю папку пользователя.
 
-Restore a full backup
---------------------------------
-This is as simple as initialising the SD card for the
-first time. You can restore a backup file to your SD
-card provided that the SD card is bigger or the same
-size as the image file. As ever, the following
-command must be executed as root.
-$ dd if=Rpi_8gb_backup. img of=/dev/mmcblk0
-bs=2M
-The command should be all on one line.
-It takes a while, but it will restore in the end. All you
-have to do is wait for the copy to finish and then boot
-the Pi with the restored SD card in the slot. See part 1
-for details on restoring compressed and/or split
-backup images.
+Итак, теперь вы знаете как примонтировать файл с резервной копии на компьютере, убедиться в его целостности, и как бонус, извлекать файл(ы) для частичного восстановления. Что ещё мы можем сделать?
 
-Restore to a larger card
------------------------------
-We can also use the smaller backup files to initialize
-a larger SD card, if we were perhaps upgrading. This
-is what I had to do when I restored a 4Gb backup to
-my 8Gb card. Once the restore completed I had a
-4Gb image on an 8Gb SD card. In order to reclaim
-the missing 4Gb all I did was to boot the Pi with the
-restored 8Gb card in place, and login as the pi user
-as normal.
-Once logged in, I executed the sudo raspi-config
-command, selected the option to "Expand root
-partition to fill SD card" and the system happily
-extended the 4Gb partition to fill up the remaining free
-space on the card. The actual resizing is carried out
-as part of the next reboot of the Pi - it doesn't happen
-immediately.
-You can see that it worked by executing the df
-command, which does not need to be executed as
-root!
+Полное восстановление из резервной копии
+----------------------------------------
+Это так же просто, как инициализация SD карточки в первый раз. Вы можете восстановить файл резервной копии на карту такого же размера (или больше). Как и прежде, следующая команда должна быть выполнена из-под root.
+
+    $ dd if=Rpi_8gb_backup. img of=/dev/mmcblk0 bs=2M
+
+Восстановление займёт некоторое время. Всё что вам остаётся - подождать и загрузить Pi со свежезаписанной карточки. Про восстановление сжатых и/или многотомных резервных копий см. I часть.
+
+Восстановление на карту большего объёма
+---------------------------------------
+У нас есть возможность записать файл из образа меньшего размера на более объёмную SD карту, в ходе обновления например. Мне пришлось проделать это когда я восстанавливал SD карту на 8 Гб из 4 Гб образа.
+
+После окончания операции я получил 4 Гб образ на 8 Гб карте.
+
+Чтобы задействовать "лишние" 4 Гб, мне пришлось загрузиться в Pi с новой карточкой и войти под своим ползователем как обычно.
+
+После этого я выполнил `sudo raspi-config`, выбрал опцию *Expand root partition to fill SD card* и система с удовольствием расширила раздел в 4 Гб чтобы заполнить оставшееся свободное пространство на карточке. Изменения вступили в силу при перезагрузке, они не происходят немедленно.
+
+Как вы заметили, не обязательно выполнять её с правами root.
 
     $ df -h /
     Fi lesystem Size Used Avai l Use% Mounted on
     /dev/root 7. 3G 1. 6G 5. 4G 23% /
 
-The output above shows my root file system,
-mounted on /, is 7.3 Gb in size so I know it cannot
-possibly be the same size as it was when I restored
-from the 4Gb backup image.
+Этот листинг показывает инфомрацию о моей корневой файловой системе с точкой `/`, теперь она стала 7.3 Гб, хоть восстанавливал я 4 Гб образ.
