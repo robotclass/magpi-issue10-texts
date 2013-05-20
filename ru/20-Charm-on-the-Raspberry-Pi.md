@@ -23,32 +23,17 @@ Charm версии 2.6.1 уже поставляется в каталоге Pro
 
 Инструментарий
 --------------
+Набор инстурментов Charm для Risc OS содержит следующие основные приложения:
 
-The set of Charm tools for Risc OS contains the
-following principal applications:
-
-* **!Charm** - A desktop shell application for
-running the tool set. The shell supports drag and
-drop for files and folders, command logging and
-error reporting.
-* **edit** - A general purpose editor that is useful
-forwriting and developing Charm source code
-(drag files or folders to edit on to the Charm shell
-icon with the shift key pressed).
-* **armc** - A compiler that generates an object file
-in binary form from a source code file written in
-the Charm programming language.
-* **arma** - An assembler that generates an object
-file in binary form from a source code file written
-in ARMassembly language.
-* **arml** - A linker that combines Charm object
-files into an executable Risc OS application or
-module.
+* **!Charm** - Оболочка для выполнения инструментария. Поддерживает перетаскивание мышью для файлов и папок, журналирование команд и отчёты об ошибках.
+* **edit** - Редактор общего назначения, используется для написания и разработки кода Charm (перетащите файлы или папки, которые нужно редактировать, на иконку Charm с нажатой клавишей Shift)
+* **armc** - Компилятор, создающий объектный файл в бинарном формате из исходного кода на языке Charm.
+* **arma** - Ассемблер, создающий объектный файл в бинарном формате из исходного кода на языке ARMassembly.
+* **arml** - Линковщик, собирающий объектные файлы Charm в исполнимый файл Risc OS или модуль.
 
 
 Новые проекты
 -------------
-
 Creating new template projects in Charm is easy
 using the !NewProject utility application. Simply
 select New Project from the menu, name the
