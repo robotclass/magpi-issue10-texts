@@ -7,34 +7,15 @@ Peter Nowosad, Guest Writer
 
 Уровень сложности: Продвинутый
 
-This and follow on articles are intended to
-promote interest in and understanding of the
-Charm language on the Raspberry Pi. As the
-author of the language, this is a goal I am keen to
-encourage, particularly among the younger
-generation of Raspberry Pi owners and users
-who are looking to learn a little about the
-mysterious world of programming.
+Эта и последующие статьи призваны повысить заинтересованность и понимание языка Charm на Raspberry Pi. Как создатель этого языка, это цель которую я преследую, в частности, среди молодого поколения пользователей Raspberry Pi, а также пользователей, которые стремятся узнать немного больше о таинственном мире программирования.
 
-The Charm tools are light on resource yet
-powerful and highly suited to an agile
-development environment. Applications of any
-complexity can be rapidly developed in small
-incremental changes without waiting around for
-the code to build; for instance the whole of the
-Charm distribution can be rebuilt in well under a minute!
+Инструментарий Charm нетребователен к ресурсам, но в то же время мощный и предоставляет гибкую среду разработки. Приложения любой сложности могут быть разработаны малыми изменениями без ожидания компиляции кода, например, весь пакет Charm можно пересобрать менее чем за одну минуту!
 
-Here I would like to cover the practical aspects
-of using Charm. I hope this will encourage
-people to take up writing Charm programs for
-themselves and join the over 1,200 people from
-around the world that have visited the Charm
-web site so far.
+Сейчас мне бы хотелось рассказать о частных аспектах использования Charm. Я надеюсь, что это поможет людям начать писать программы на Charm и присоединиться к сообществу более чем 1200 людей со всего мира, которые уже посетили веб-сайт Charm.
 
 
-Installation
-------------
-
+Установка
+---------
 Charm version 2.6.1 is already bundled in the
 Programming folder of the RC6 release of Risc
 OS for the Raspberry Pi. I would however
@@ -181,13 +162,9 @@ it (the linker will find the Out library automatically
 for you).
 
 
-A Practical Project
+Практическая задача
 -------------------
-
-If you are up for a challenge, I suggest replacing
-the default !NewProject MyProject module with
-the following code to output the first dozen
-factorial numbers:
+Если вы готовы к новому испытанию, я предлагаю заменить модуль по-умолчанию `!NewProject myProject` на следующий код, выводящий первую дюжину факториальных чисел:
 
     import lib.Out;
     module MyProject
@@ -204,15 +181,9 @@ factorial numbers:
       }
     }
 
-This code illustrates the use of recursion to
-calculate each value from the previous value via
-multiplication while utilising the axiom 1!=1.
+Этот код показывает пример использования рекурсии для вычисления каждого нового значения через умножение, учитывая аксиому `1! = 1`.
 
-Finally as an exercise, try changing the program
-so that the first 20 factorials can be calculated
-without running into the 32-bit limitation on
-integer size (Hint: return a real from a factorial
-and use .float instead of .num to output it).
+Наконец, как упражнение, попробуйте изменить программу так, чтобы она вычисляла первые 20 чисел без ограничений на значение числа в 32-битном представлении (подсказка: возвращайте вещественное число из `factorial` и используйте `.float` вместо `.num` для его вывода).
 
 
 Что дальше?
