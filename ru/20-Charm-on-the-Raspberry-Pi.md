@@ -16,34 +16,13 @@ Peter Nowosad, Guest Writer
 
 Установка
 ---------
-Charm version 2.6.1 is already bundled in the
-Programming folder of the RC6 release of Risc
-OS for the Raspberry Pi. I would however
-recommend updating to the latest version
-(currently 2.6.4) which is freely distributed under
-the Gnu Public License as a simple zip file from
-the Charm website charm.qu-bit.co.uk. There
-you can read more, get in touch with me through
-the Charm forum and view screenshots of the various
-Charm demos, of which the most fun is Decapedes,
-a shoot'em up somewhat akin to Pacman with
-some nice sound and graphics.
+Charm версии 2.6.1 уже поставляется в каталоге Programming выпуска RC6 операционной системы Risc OS для Raspberry Pi. Тем не менее, я бы рекомендовал вам обновиться до последней версии (на сегодня это 2.6.4), которая распространяется свободно по условиям лицензии Gnu Public License в виде простого файла zip через сайт charm.qu-bit.co.uk. На этом сайте вы можете получить более полную информацию, а также связаться со мной через форум Charm, посмотреть скриншоты различных демонстрационных программ на Charm, самая интересная из которых Decapedees, стрелялка похожая на Pacman с приятной графикой и музыкой.
 
-You may optionally wish to utilise the vector floating point
-(VFP) capabilities of the ARM 11 chip which is
-off by default for people running Charm on
-emulators or older variants of the ARM chip. This
-will involve enabling the VFP option in the Charm
-shell and re-building the distribution as described
-on the web site. Doing this will for instance speed
-up the included Mandelbrot explorer program by
-an order of magnitude by replacing floating point
-emulator (FPE) instuctions with native VFP
-coprocessor instructions.
+Вам также может понравиться использовать векторные операции с плавающей точкой (VFP, vector floating point) ARM11, которые выключены по-умолчанию для тех, кто запускает Charm на эмуляторах и ранних версиях процессоров ARM. Вам нужно будет включить VFP в оболочке Charm и пересобрать дистрибутив, инструкции можно найти на сайте. После этого, вы получите, например, на порядок более высокую производительность в программе Mandelbrot explorer, т.к. эмулятор вычислений с плавающей точкой (FPE, floating point emulator) будет заменён родными инструкциями VFP сопроцессора.
 
 
-Tools
------
+Инструментарий
+--------------
 
 The set of Charm tools for Risc OS contains the
 following principal applications:
@@ -67,8 +46,8 @@ files into an executable Risc OS application or
 module.
 
 
-New Projects
-------------
+Новые проекты
+-------------
 
 Creating new template projects in Charm is easy
 using the !NewProject utility application. Simply
@@ -100,8 +79,8 @@ are usually linked directly to the correct
 file using the program command.
 
 
-Modular Programming
--------------------
+Модульное программирование
+--------------------------
 
 The concept of modules is key to an
 understanding of Charm (N.B. in this context
@@ -124,8 +103,8 @@ which also specifies the name and location of the
 linked application or module.
 
 
-Getting Started
----------------
+Начало работы
+-------------
 
 So now for the first few snippets of the Charm
 language. Each project must contain one and
