@@ -1,6 +1,8 @@
 Состояние перевода по 10 номеру журнала TheMagPi
 ================================================
 
+**Примечание:** То же самое в реальном времени на [Диске Google](https://docs.google.com/spreadsheet/ccc?key=0AoPc7MVZIiXgdFFJeXdnMGJ6cWhFNDdWY2pabmNwY0E&usp=sharing).
+
 Файлы перводятся в подпапке `ru`
 
 
@@ -19,7 +21,7 @@
 | 23 | 23-Introducing-streams.md                   |            |              |
 | 26 | 26-The-Scratch-Patch.md                     |            |              |
 | 33 | 33-Parallel-calculations-part-1.md          |            |              |
-| 36 | *36-Feedback-&-Question-Time.md             | переводится| tabby-cat    |
+| 36 | *36-Feedback-&-Question-Time.md*            | переводится| tabby-cat    |
 
 
 Состояния:
