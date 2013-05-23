@@ -7,15 +7,18 @@
 Все статьи 10 номер
 -------------------
 
-| Стр| Файл                                        | Состояние  |
-|---:|---------------------------------------------|:----------:|
-|  2 | **02-intro.textile**                        | переведён  |
-|  4 | **04-remote-controlled-robot-cam-part2.md** | переведён  |
-|  8 | 08-a-cocktail-of-expansion-boards.md        | переводится (kim) |
-| 11 | **11-this-months-competition.md**           | переведён  |
-| 12 | 12-backing-up-part-2.md                     | переводится (kim) |
-| 16 | 16-BASH-basics.md                           |            |
-| 20 | 20-Charm-on-the-Raspberry-Pi.md             | переводится (kim) |
+| Стр| Файл                                        | Состояние  | Пользователь |
+|---:|---------------------------------------------|:----------:|--------------|
+|  2 | **02-intro.textile**                        | переведён  | tabby-cat    |
+|  4 | **04-remote-controlled-robot-cam-part2.md** | переведён  | tabby-cat    |
+|  8 | 08-a-cocktail-of-expansion-boards.md        | переводится| tabby-cat    |
+| 11 | **11-this-months-competition.md**           | переведён  | tabby-cat    |
+| 12 | 12-backing-up-part-2.md                     | переводится| tabby-cat    |
+| 16 | 16-BASH-basics.md                           |            |              |
+| 20 | 20-Charm-on-the-Raspberry-Pi.md             | переводится| tabby-cat    |
+| 23 | 23-Introducing-streams.md                   |            |              |
+| 33 | 33-Parallel-calculations-part-1.md          |            |              |
+| 36 | 36-Feedback-&-Question-Time.md              |            |              |
 
 
 TODO: Пока не все ещё переведены в текстовый формат.
