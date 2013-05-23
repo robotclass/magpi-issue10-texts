@@ -17,7 +17,7 @@
 | 16 | 16-BASH-basics.md                           |            |              |
 | 20 | *20-Charm-on-the-Raspberry-Pi.md*           | переводится| tabby-cat    |
 | 23 | 23-Introducing-streams.md                   |            |              |
-| 26 | The Scratch Patch                           |            |              |
+| 26 | 26-The-Scratch-Patch.md                     |            |              |
 | 33 | 33-Parallel-calculations-part-1.md          |            |              |
 | 36 | *36-Feedback-&-Question-Time.md             | переводится| tabby-cat    |
 
