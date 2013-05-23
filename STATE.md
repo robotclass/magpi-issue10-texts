@@ -4,16 +4,18 @@
 Файлы перводятся в подпапке `ru`
 
 
-Все статьи
-----------
+Все статьи 10 номер
+-------------------
 
-* 02-intro.textile [translated]
-* 04-remote-controlled-robot-cam-part2.md [translated]
-* 08-a-cocktail-of-expansion-boards.md [inprocess] 
-* 11-this-months-competition.md [translated]
-* 12-backing-up-part-2.md [inprocess] 
-* 16-BASH-basics.md
-* 20-Charm-on-the-Raspberry-Pi.md [inprocess] 
+| Стр| Файл                                        | Состояние  |
+|---:|---------------------------------------------|:----------:|
+|  2 | **02-intro.textile**                        | переведён  |
+|  4 | **04-remote-controlled-robot-cam-part2.md** | переведён  |
+|  8 | 08-a-cocktail-of-expansion-boards.md        | переводится (kim) |
+| 11 | **11-this-months-competition.md**           | переведён  |
+| 12 | 12-backing-up-part-2.md                     | переводится (kim) |
+| 16 | 16-BASH-basics.md                           |            |
+| 20 | 20-Charm-on-the-Raspberry-Pi.md             | переводится (kim) |
 
 
 TODO: Пока не все ещё переведены в текстовый формат.
