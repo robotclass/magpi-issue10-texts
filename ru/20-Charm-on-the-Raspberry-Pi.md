@@ -34,16 +34,7 @@ Charm версии 2.6.1 уже поставляется в каталоге Pro
 
 Новые проекты
 -------------
-Creating new template projects in Charm is easy
-using the !NewProject utility application. Simply
-select New Project from the menu, name the
-project as you wish (default is MyProject) and
-drag the folder icon to the folder in which you
-wish it to reside. You can then build the project
-by dragging the project folder on to the Charm
-icon. You should then see the following in the
-Charm log:
-
+Создание новых проектов по шаблону в Charm делается просто с помощью утилиты !NewProject. Просто выберите New Project из меню, укажите имя по желанию (или оставьте начальное, MyProject) и перетащите значок папки в каталог, где нужно разместить проект. Потом вы можете скомпилировать проект перетаскиванием значка папки на иконку Charm, при этом в журнале Charm вы должны увидеть примерно следующее:
 
 Required project folders are created
 automatically, namely:
@@ -63,13 +54,14 @@ are usually linked directly to the correct
 !RunImage location from inside the project 'build
 file using the program command.
 
+Программы, находящиеся в каталоге приложений, обычно напрямую связаны с правильным путём !RunImage ...
+
+*todo: проверить исходный текст, что-то не то по-моему...*
+
 
 Модульное программирование
 --------------------------
-
-The concept of modules is key to an
-understanding of Charm (N.B. in this context
-Charm modules are different from Risc OS
+Rонцепция модулей - ключевой момент к пониманию Charm (N.B. in this context Charm modules are different from Risc OS
 modules!). Each module is introduced with the
 keyword module, and each source file that
 Charm compiles contains a single module
