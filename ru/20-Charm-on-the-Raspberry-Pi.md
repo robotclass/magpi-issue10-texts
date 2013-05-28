@@ -82,23 +82,16 @@ linked application or module.
 
 Начало работы
 -------------
+Итак, пришло время для нескольких первых фрагментов кода на Charm. Каждый проект должен содержать один и только один модуль, в котором экспортирована процедура ~start с одной из двух возможных сигнатур.
 
-So now for the first few snippets of the Charm
-language. Each project must contain one and
-only one module in which a ~start procedure with
-one of two specific signatures is exported.
-
-If no command line parameters are required, the
-~start procedures is defined like this:
+Если обработка аргументов командной строки не требуется, процедура ~start будет определяться так:
 
     module Main
     {
       export proc ~start() {...startup code }
     }
 
-Hence, the classic hello world program in Charm
-which uses the vdu stream of the Out run time
-library module can be coded in file `src.hello` as:
+Таким образом, классическое приложение "Hello, World" на Charm, использующая поток vdu библиотеки времени выполнения Out, может быть закодирована в файле `src.hello`:
 
     import lib.Out;
     module Hello {
@@ -107,15 +100,12 @@ library module can be coded in file `src.hello` as:
       }
     }
 
-though you will need the project 'build file to
-contain:
+При этом, чтобы программу можно было запустить, файл сборки проекта должен содержать:
 
     module hello
     program hello
 
-in order to build the program before you can run
-it (the linker will find the Out library automatically
-for you).
+Библиотеку Out линковщик подключит автоматически.
 
 
 Практическая задача
