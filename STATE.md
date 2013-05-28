@@ -12,7 +12,7 @@
 | Стр| Файл                                        | Состояние  | Пользователь |
 |---:|---------------------------------------------|:----------:|--------------|
 |  2 | **02-intro.textile**                        | готово     | cube13       |
-|  4 | **04-remote-controlled-robot-cam-part2.md** | редакция   | cube13       |
+|  4 | **04-remote-controlled-robot-cam-part2.md** | готово     | cube13       |
 |  8 | **08-a-cocktail-of-expansion-boards.md**    | переведён  | tabby-cat    |
 | 11 | **11-this-months-competition.md**           | переведён  | tabby-cat    |
 | 12 | **12-backing-up-part-2.md**                 | переведён  | tabby-cat    |
