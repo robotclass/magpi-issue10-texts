@@ -22,9 +22,9 @@
 
 * * *
 
-Im a big fan of the raspberry and also appreciate all the work you put in theMagPi magazine. Its a pleasure to read the articles and feel the energy and love your team of volunteers put into that. Thank you very much
+Я большой поклонник Raspberry и также ценю ваш труд над журнаолм The MagPi. Мне очень нравится читать статьи и чувствовать ту энергию и любовь, которую ваша команда волонтёров вкладывает в него. Спасибо вам большое!
 
-*Dominik from Munich, Germany*
+*Dominik из Munich, Germany*
 
 * * *
 
@@ -34,13 +34,12 @@ I have read your current issues of the mag and am delighted with it. It has been
 
 * * *
 
-I was wondering if I could write for The Mag Pi magazine, I love the magazine, and I of course love technology and writing. I was also one of the first Raspberry Pi users. Thank you.
+Мне было интересно, могу ли я написать что-нибудь для The MagPi, мне нравится этот журнал, и конечно же я люблю технологии. Я также стал одним из первых обладателей Raspberry Pi. Спасибо вам.
 
 *Arman Bhalla*
 
 * * *
 
-I justwanted you to knowthat I love your magazine. It is well laid out and highly informative. It is the perfect
-introduction for students, and also hobbyists to the wonderful world of Raspberry Pi. Believe me when I say, you are helping create the next generation of Engineersm makers, hackers, and artists. Keep up the greatwork.
+Мне просто хотелось бы сказать вам, что мне нравится ваш журнал. Он хорошо изложен и очень познавательный. Это отличное введение для учеников, а также тех, для кого удивительный мир Raspberry Pi мог бы стать хобби. Поверьте мне, вы помогаете создавать следующее поколение конструкторов, хакеров и художников. Продолжайте это благое дело!
 
 *David Sanders*
