@@ -28,7 +28,8 @@
 
 * * *
 
-I have read your current issues of the mag and am delighted with it. It has been a while since this sort of publication was available, and I have been wanting to get into programming for years, even up to the point of attending college. But with this I can study at my own pace and start my own projects. I don't have a pie as of yet, but intend to buy the starter pack from Maplin as soon as I can. Again, thanks.
+Я прочитал все выпуски журнала и я в восторге. Такого рода публикации были какое-то время, а я давно хотел приобщиться к программированию, даже до момента когда поступил в колледж. Но с вашим журналом я могу заниматься самостоятельно и запускать собственные проекты. У меня пока нет своего Pi, но я собираюсь приобрести Starter pack в Maplin как только смогу. Ещё раз спасибо.
+
 
 *Ryan Hunter*
 
