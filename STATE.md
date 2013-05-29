@@ -17,7 +17,7 @@
 | 11 | **11-this-months-competition.md**           | переведён  | tabby-cat    |
 | 12 | **12-backing-up-part-2.md**                 | переведён  | tabby-cat    |
 | 16 | 16-BASH-basics.md                           |            |              |
-| 20 | *20-Charm-on-the-Raspberry-Pi.md*           | переводится| tabby-cat    |
+| 20 | **20-Charm-on-the-Raspberry-Pi.md**         | переведён  | tabby-cat    |
 | 23 | 23-Introducing-streams.md                   |            |              |
 | 26 | 26-The-Scratch-Patch.md                     |            |              |
 | 33 | 33-Parallel-calculations-part-1.md          |            |              |
