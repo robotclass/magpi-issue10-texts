@@ -1,17 +1,21 @@
-Parallel calculations part 1
-============================
+Параллельные вычисления, Часть I
+================================
 
 W. H. Bell, The MagPi
 
-Difficulty: Advanced
+Уровень: сложный
 
 * * *
 
-Previous Python examples have discussed web server access to programs. However, sometimes other client server relationships can be useful. This month's article is the first part of a demonstration of a basic client server application, which shows how other applications might be written.
+В предыдущих примерах на Python мы показывали, как получить доступ к программе из веба. Тем не менее, существуют и другие типы клиент-серверных взаимодействий, которые также могут оказаться полезными. Статья этого месяца - первая часть демонстрации простого клиент-серверного приложения, которая показывает приёмы программирования для других разработок.
 
-The Raspberry Pi can be deployed with solar panels or batteries and connected to a network using a Wifi dongle. In this manner, it can be used for remote monitoring or robotics. Alternatively, the Raspberry Pi could be used as the control centre of a computational system. In the first example, the Raspberry Pi could be a client or a server. In the section example, the Raspberry Pi is likely to be a server.
+К Raspberry Pi можно присоединить солнечные панели или батареи и подключить его к сети через WiFi адаптер. В этом виде он может использоваться для удалённого наблюдения или робототехники. Как вариант, можно использовать Raspberry Pi в качестве управляющего звена вычислительной системы. В первом примере Raspberry Pi может быть как клиентом, так и сервером. Во втором - скорее всего просто сервером.
 
-Servers are processes which listen for clients to connect to them. When a server receives a request from a client, it is common for a thread to be allocated to the client connection. A thread is the smallest sequence of programmed instructions which can be managed independently by an operating system. Often the server listening process runs as one thread and gives the clients each a thread from a limited pool. When the client is finished, the thread in the server should be released for a new connection. If the server created a new thread for each client connection it would quickly run out of memory. Sometimes calculations require more than one computer to find a result quickly. When a physics or engineering problem is described by an equation with many variables, finding a global minimum for the equation can be impossible on paper and take too long with one computer. To solve this problem, a network of computers can be connected together to calculate many points and numerically solve the equation much more quickly. While the Raspberry Pi does not have the fastest CPU, it can be used to demonstrate this principle. For the client-server parts of this problem another Raspberry Pi or another computer will be needed. If you have many other computers to play with or can invite many friends around, all the better.
+Сервера - это процессы, которые ожидают подключения клиентов (слушают). Когда сервер получает запрос от клиента, обычно создаётся отдельный поток для обслуживания нового подключения. Поток - наименьшая последовательность запрограммированных инструкций, которая может быть исполнена операционнй системной независимо от других. Часто прослушивающий процесс сервера выполняется отдельным потоком и выделяет клиентам потоки из некоторого ограниченного пула. Когда клиент завершает работу, назначенный ему поток должен быть освобождён для новых соединений. Если сервер будет создавать для каждого очередного клиента потоки, у него быстро закончится память.
+
+Иногда для того, чтобы произвести вычисления достаточно быстро, требуется несколько компьютеров. Когда физическая или инженерная проблема описана уровнениями со множеством переменных, поиск глобального минимума на бумаге становится невозможным, а на одном компьютере занимает слишком много времени. Для решения этой проблемы, несколько компьютеров объединяются в сеть и вычисляют множество точек одновременно, тем самым находя численное решение задачи намного быстрее.
+
+Raspberry Pi наделён не самым быстрым центральным процессором, но на нём можно показать сам принцип таких вычислений. Для клиент-серверного решения задачи понадобится два или более Raspberry Pi, или просто другой компьютер. Если вы обладатель нескольких компьютеров или же у вас есть возможность объединиться с дрзьями, будет только лучше.
 
 
 Classes and function evaluation
