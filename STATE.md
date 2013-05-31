@@ -9,19 +9,19 @@
 Все статьи 10 номер
 -------------------
 
-| Стр| Файл                                        | Состояние  | Пользователь |
-|---:|---------------------------------------------|:----------:|--------------|
-|  2 | **02-intro.textile**                        | готово     | cube13       |
-|  4 | **04-remote-controlled-robot-cam-part2.md** | готово     | cube13       |
-|  8 | **08-a-cocktail-of-expansion-boards.md**    | переведён  | tabby-cat    |
-| 11 | **11-this-months-competition.md**           | редакция   | cube13.      |
-| 12 | **12-backing-up-part-2.md**                 | переведён  | tabby-cat    |
-| 16 | 16-BASH-basics.md                           |            |              |
-| 20 | **20-Charm-on-the-Raspberry-Pi.md**         | переведён  | tabby-cat    |
-| 23 | 23-Introducing-streams.md                   |            |              |
-| 26 | 26-The-Scratch-Patch.md                     |            |              |
-| 33 | 33-Parallel-calculations-part-1.md          |            |              |
-| 36 | **36-Feedback-&-Question-Time.md**          | переведён  | tabby-cat    |
+| Стр| Файл                                        | Состояние   | Пользователь |
+|---:|---------------------------------------------|:-----------:|--------------|
+|  2 | **02-intro.textile**                        | готово      | cube13       |
+|  4 | **04-remote-controlled-robot-cam-part2.md** | готово      | cube13       |
+|  8 | **08-a-cocktail-of-expansion-boards.md**    | переведён   | tabby-cat    |
+| 11 | **11-this-months-competition.md**           | редакция    | cube13.      |
+| 12 | **12-backing-up-part-2.md**                 | переведён   | tabby-cat    |
+| 16 | 16-BASH-basics.md                           |             |              |
+| 20 | **20-Charm-on-the-Raspberry-Pi.md**         | переведён   | tabby-cat    |
+| 23 | 23-Introducing-streams.md                   |             |              |
+| 26 | 26-The-Scratch-Patch.md                     |             |              |
+| 33 | *33-Parallel-calculations-part-1.md*        | переводится | tabby-cat    |
+| 36 | **36-Feedback-&-Question-Time.md**          | переведён   | tabby-cat    |
 
 
 Состояния:
