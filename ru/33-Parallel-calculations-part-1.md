@@ -7,22 +7,22 @@ W. H. Bell, The MagPi
 
 * * *
 
-В предыдущих примерах на Python мы показывали, как получить доступ к программе из веба. Тем не менее, существуют и другие типы клиент-серверных взаимодействий, которые также могут оказаться полезными. Статья этого месяца - первая часть демонстрации простого клиент-серверного приложения, которая показывает приёмы программирования для других разработок.
+В предыдущих примерах на Python мы показывали, как получить доступ к программе из веба. Тем не менее, существуют и другие типы клиент-серверных взаимодействий, которые также могут оказаться полезными. Статья этого месяца - первая часть демонстрации простого клиент-серверного приложения, которая показывает приемы программирования для других разработок.
 
-К Raspberry Pi можно присоединить солнечные панели или батареи и подключить его к сети через WiFi адаптер. В этом виде он может использоваться для удалённого наблюдения или робототехники. Как вариант, можно использовать Raspberry Pi в качестве управляющего звена вычислительной системы. В первом примере Raspberry Pi может быть как клиентом, так и сервером. Во втором - скорее всего просто сервером.
+К Raspberry Pi можно присоединить солнечные панели или батареи и подключить его к сети через WiFi адаптер. В этом виде он может использоваться для удаленного наблюдения или робототехники. Как вариант, можно использовать Raspberry Pi в качестве управляющего звена вычислительной системы. В первом примере Raspberry Pi может быть как клиентом, так и сервером. Во втором - скорее всего просто сервером.
 
-Сервера - это процессы, которые ожидают подключения клиентов (слушают). Когда сервер получает запрос от клиента, обычно создаётся отдельный поток для обслуживания нового подключения. Поток - наименьшая последовательность запрограммированных инструкций, которая может быть исполнена операционнй системной независимо от других. Часто прослушивающий процесс сервера выполняется отдельным потоком и выделяет клиентам потоки из некоторого ограниченного пула. Когда клиент завершает работу, назначенный ему поток должен быть освобождён для новых соединений. Если сервер будет создавать для каждого очередного клиента потоки, у него быстро закончится память.
+Сервера - это процессы, которые ожидают подключения клиентов (слушают). Когда сервер получает запрос от клиента, обычно создается отдельный поток для обслуживания нового подключения. Поток - наименьшая последовательность запрограммированных инструкций, которая может быть исполнена операционной системной независимо от других. Часто прослушивающий процесс сервера выполняется отдельным потоком и выделяет клиентам потоки из некоторого ограниченного пула. Когда клиент завершает работу, назначенный ему поток должен быть освобожден для новых соединений. Если сервер будет создавать для каждого очередного клиента потоки, у него быстро закончится память.
 
-Иногда для того, чтобы произвести вычисления достаточно быстро, требуется несколько компьютеров. Когда физическая или инженерная проблема описана уровнениями со множеством переменных, поиск глобального минимума на бумаге становится невозможным, а на одном компьютере занимает слишком много времени. Для решения этой проблемы, несколько компьютеров объединяются в сеть и вычисляют множество точек одновременно, тем самым находя численное решение задачи намного быстрее.
+Иногда для того, чтобы произвести вычисления достаточно быстро, требуется несколько компьютеров. Когда физическая или инженерная проблема описана уравнениями со множеством переменных, поиск глобального минимума на бумаге становится невозможным, а на одном компьютере занимает слишком много времени. Для решения этой проблемы, несколько компьютеров объединяются в сеть и вычисляют множество точек одновременно, тем самым находя численное решение задачи намного быстрее.
 
-Raspberry Pi наделён не самым быстрым центральным процессором, но на нём можно показать сам принцип таких вычислений. Для клиент-серверного решения задачи понадобится два или более Raspberry Pi, или просто другой компьютер. Если вы обладатель нескольких компьютеров или же у вас есть возможность объединиться с дрзьями, будет только лучше.
+Raspberry Pi наделен не самым быстрым центральным процессором, но на нем можно показать сам принцип таких вычислений. Для клиент-серверного решения задачи понадобится два или более Raspberry Pi, или просто другой компьютер. Если вы обладатель нескольких компьютеров или же у вас есть возможность объединиться с друзьями, будет только лучше.
 
 
-Classes and function evaluation
--------------------------------
-Create a file called `FunctionCalculator.py` and add to it,
+Классы и вычисление функций
+---------------------------
+Создайте файл с именем `FunctionCalculator.py` и добавьте в него следующий код:
 
-    # A class to calculate the value of a function string
+    # Класс для вычисления значения функции, записанной в строке
     class FunctionCalculator:
       def evaluate(self, cmd):
         y = 0.
@@ -30,27 +30,27 @@ Create a file called `FunctionCalculator.py` and add to it,
         exec cmd
         print "y = %e" % y
         return y
-    
-    # A class to calculate many the result of many equations at once.
-      class SynchronousCalculator:
-        def __init__(self):
-          self.calculator = FunctionCalculator()
-        
-        def evaluate(self, cmds):
-          results=[]
-          for cmd in cmds:
-            results.append(self.calculator.evaluate(cmd))
-          return results
 
-The `FunctionCalculator` is a simple class which has one member function that executes the value of a string as a python command. The `SynchronousCalculator` includes an instance of the `FunctionCalculator` class to evaluate many commands one after another. In the case of the FunctionCalculator, the evaluate method takes one string whereas the `SynchronousCalculator` function takes a list of strings.
+    # Класс для пакетного рассчёта нескольких уравнений
+    class SynchronousCalculator:
+      def __init__(self):
+        self.calculator = FunctionCalculator()
 
-To test `FunctionCalculator.py` open a python shell by typing `python`. Then type:
+      def evaluate(self, cmds):
+        results=[]
+        for cmd in cmds:
+          results.append(self.calculator.evaluate(cmd))
+        return results
+
+`FunctionCalculator` - простой класс с одним методом, который выполняет код, записанный в строке, как команду python. `SynchronousCalculator` включает в себя экземпляр класса `FunctionCalculator` для выполнения нескольких команд друг за другом. Из этого следует, что метод `evaluate` в `FunctionCalculator` получает одну строчку, а в такой же метод в `SynchronousCalculator` передаётся список строк.
+
+Чтобы протестировать `FunctionCalculator.py` откройте оболочку python набрав `python`. Затем выполните:
 
     from FunctionCalculator import FunctionCalculator
     f = FunctionCalculator()
     f.evaluate("y=5*100")
 
-This evaluate function prints the command and the result of evaluating the command. Many points of a mathematical function can be evaluated using the SynchronousCalculator. For example, ten points on the curve y=x^2 can be calculated by typing,
+Эти команды рассчитают результат вычисления функции. Несколько точек функции можно вычислить с помощью `SynchronousCalculator`. Например, десять точек кривой y=x^2 можно получить набрав:
 
     from FunctionCalculator import *
     import math
@@ -79,25 +79,25 @@ If this is successful, it will return the time the ping took five times. Use pin
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sock.settimeout(None)
         self.client_sockets = []
-    
+
       def initialise(self):
         try:
           self.sock.bind((self.host, self.port))
         except socket.error:
           return
-    
+
         self.sock.listen(5)
         self.server_thread = threading.Thread(target=self.serve_forever)
         self.server_thread.setDaemon(True)
         self.server_thread.start()
         print "Server running on %s and listening on %d" % (self.host, self.port)
-    
+
       def serve_forever(self):
         try:
           request, client_address = self.sock.accept()
         except socket.error:
           return
-    
+
         self.client_sockets.append(request)
         print "Received connection from " , client_address
 
