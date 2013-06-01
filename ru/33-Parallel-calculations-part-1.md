@@ -30,12 +30,12 @@ Raspberry Pi наделен не самым быстрым центральны�
         exec cmd
         print "y = %e" % y
         return y
-
+    
     # Класс для пакетного рассчёта нескольких уравнений
     class SynchronousCalculator:
       def __init__(self):
         self.calculator = FunctionCalculator()
-
+    
       def evaluate(self, cmds):
         results=[]
         for cmd in cmds:
@@ -57,10 +57,10 @@ Raspberry Pi наделен не самым быстрым центральны�
     f_sync = SynchronousCalculator()
     cmds = []
     for x in xrange(11):
-      cmds.append("import math; y = math. pow(%f, 2)" % (x))
+      cmds.append("import math; y = math.pow(%f, 2)" % (x))
     f_sync.evaluate(cmds)
 
-Notice that the `FunctionCalculator` class, which is used by the `SynchronousCalculator` class, does not need to import the `math` functions until they are needed during the command evaluation. This becomes very powerful when used with many computers, where the function to be evaluated remotely might not be known before runtime.
+Обратите внимание, что в классе `FunctionCalculator`, используемом в `SynchronousCalculator` не нужно импортировать функции из `math` до тех пор пока они не потребуются при выполнии команды. Это особенно эффективно когда программа выполняется на многих компьютерах ивычисляемая функция может быть неизвестна до момента запуска программы.
 
 The next step needed to improve the speed of calculations is to use more than one computer. To do this, one Raspberry Pi will be needed as a server and another Raspberry Pi or other computer will be needed as a client. Connect both Raspberry Pis or the Raspberry Pi and other computer to the network. Then find the IP addresses for the two machines. On LINUX or
 OSX type `ifconfig`, or on Windows type `ipconfig`.
