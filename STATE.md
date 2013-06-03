@@ -1,8 +1,6 @@
 Состояние перевода по 10 номеру журнала TheMagPi
 ================================================
 
-**Примечание:** То же самое в реальном времени на [Диске Google](https://docs.google.com/spreadsheet/ccc?key=0AoPc7MVZIiXgdFFJeXdnMGJ6cWhFNDdWY2pabmNwY0E&usp=sharing).
-
 Файлы перводятся в подпапке `ru`
 
 
