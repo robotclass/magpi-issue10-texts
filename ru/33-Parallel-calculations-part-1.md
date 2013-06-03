@@ -62,15 +62,13 @@ Raspberry Pi наделен не самым быстрым центральны�
 
 Обратите внимание, что в классе `FunctionCalculator`, используемом в `SynchronousCalculator` не нужно импортировать функции из `math` до тех пор пока они не потребуются при выполнии команды. Это особенно эффективно когда программа выполняется на многих компьютерах ивычисляемая функция может быть неизвестна до момента запуска программы.
 
-The next step needed to improve the speed of calculations is to use more than one computer. To do this, one Raspberry Pi will be needed as a server and another Raspberry Pi or other computer will be needed as a client. Connect both Raspberry Pis or the Raspberry Pi and other computer to the network. Then find the IP addresses for the two machines. On LINUX or
-OSX type `ifconfig`, or on Windows type `ipconfig`.
+Следующим шагом в ускорении вычислений будет использование второго компьютера. Чтобы выполнить его, нужно сделать один Raspberry Pi сервером, а другой Raspberry Pi или компьютер - клиентом. Соедините оба Raspberry Pi или Raspberry Pi с другим компьютерм сетью. Затем найдите IP адреса обеих машин, для этого в Linux или OS X наберите `ifconfig` или `ipconfig` в Windows.
 
-To avoid any difficulties with network address translation (NAT), make sure that the two computers are on the same
-network. Then test the network path using ping from one machine to the other. For example,
+Чтобы избежать проблем с трансляцией сетевых адресов (NAT), убедитесь что два компьютера находятся в одной сети. Затем протестируйте сетевой маршрут от одной машины к другой с помощью ping. Например, так:
 
     ping -c 5 192.168.1.12
 
-If this is successful, it will return the time the ping took five times. Use ping from both machines to be absolutely sure the network path is as hoped. Now create a `SimpleServer.py` file containing
+Если всё хорошо, утилита покажет время, потраченное на запросы, пять раз. Используйте ping на обеих машинах чтобы полностью удостовериться в надёжности сетевого соединения. После этого создайте файл `SimpleServer.py`, содержащий следующий код:
 
     class SimpleServer:
       def __init__(self, host, port):
@@ -101,21 +99,21 @@ If this is successful, it will return the time the ping took five times. Use pin
         self.client_sockets.append(request)
         print "Received connection from " , client_address
 
-To start up the simple server, open a python shell and type:
+Чтобы запустить наш простой сервер, откройте оболочку python и выполните:
 
     from SimpleServer import SimpleServer
     import socket
     server = SimpleServer("192.168.1.3" , 20000)
     server.initialise()
 
-Then go to the other Raspberry Pi and open a python shell and type:
+Затем откройте python на втором компьютере и наберите:
 
     import socket
     sock = socket. socket(socket. AF_INET, socket. SOCK_STREAM)
     sock.connect(("192.168.1.3" , 20000)) # The IP address of the server machine
     sock.close()
 
-Now look on the server machine. The server machine reports that the client machine has connected to it.
+Вернитесь к серверному Raspberry Pi. Он должен показывать, чтол к нему подключился клиентский компьютер.
 
 In the example program, the server address is explicitly used in the server startup, since the host name of a Raspberry Pi using DHCP resolves to the local address `127.0.0.1`. If the server's host name is associated with an address on the local network, then the command `socket.getfqdn()` can be used instead of `192.168.1.3`.
 
@@ -125,6 +123,6 @@ refers to the address family, which in this case is an Internet Protocol address
 
 The `SimpleServer` class contains two other member functions `initialise` and `serve_forever`. The initialise function tries to bind to the allocated socket. If this is successful, it configures the socket as a listening socket. Then a thread is created which executes the `serve_forever` member function. The thread is configured as a daemon and started. The serve_forever member function is the listening process which accepts connections from clients. The client socket associated with a connection is then added to the list of client sockets.
 
-The next article will show how to send and receive commands from clients, using threads for each associated connection.
+В следующей статье я расскажу как отправлять клиентам команды и получать ответы с использованием отдельных потоков для каждого соединения.
 
 *Testedwith Python 2.7.3 (Raspbian) & 2.6.1 (OSX10.6.8)*
