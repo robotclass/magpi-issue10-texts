@@ -14,7 +14,7 @@
 |  8 | **08-a-cocktail-of-expansion-boards.md**    | переведён   | tabby-cat    |
 | 11 | **11-this-months-competition.md**           | готово      | cube13       |
 | 12 | **12-backing-up-part-2.md**                 | редакция    | cube13       |
-| 16 | **16-BASH-basics.md**                       | переводится | tabby-cat    |
+| 16 | *16-BASH-basics.md*                         | переводится | tabby-cat    |
 | 20 | **20-Charm-on-the-Raspberry-Pi.md**         | переведён   | tabby-cat    |
 | 23 | 23-Introducing-streams.md                   |             |              |
 | 26 | 26-The-Scratch-Patch.md                     |             |              |
