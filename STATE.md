@@ -18,7 +18,7 @@
 | 20 | **20-Charm-on-the-Raspberry-Pi.md**         | переведён   | tabby-cat    |
 | 23 | 23-Introducing-streams.md                   |             |              |
 | 26 | 26-The-Scratch-Patch.md                     |             |              |
-| 33 | *33-Parallel-calculations-part-1.md*        | переводится | tabby-cat    |
+| 33 | **33-Parallel-calculations-part-1.md**      | переведён   | tabby-cat    |
 | 36 | **36-Feedback-&-Question-Time.md**          | переведён   | tabby-cat    |
 
 
