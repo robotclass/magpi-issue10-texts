@@ -1,31 +1,18 @@
-1 - BASH basics
-===============
+Основы BASH
+===========
 
 W. H. Bell
 MagPi Writer
 
-DIFFICULTY: BEGINNER
+Сложность: для начинающих
+
+Bash (Bourne Again Shell) вот уже на протяжении последних лет является оболочкой по умолчанию в Linux. Цель этой серии статей - дать обзор Bash, описания синтаксиса и встроенных функций. Bash - отличный инструмент для объединения нескольких программ с минимальными усилиями, - и поэтому цикл статей так и назыается, "Синяя изолента Bash".
+
+По мере чтения статей вам может понадобиться обратиться к справке Bash, чтоб открыть её, наберите `man bash`. Команды поиска по справке доступны в самой программе `man`, другие можно найти в руководстве по `less`. Некоторые команды Bash уже рассматривались нами в серии Command Line Clinic 2-5 выпусков журнала.
 
 
-
-Bash (Bourne Again Shell) has been the default LINUX
-shell for several years. The aim of this series is to give an
-overview of the Bash shell, providing a description of the
-syntax and built in functions. Bash is great for lashing
-together several different programs with minimal overhead.
-For this reason, this of series of articles is called "Bash
-Gaffer Tape".
-
-When reading these articles, it may prove useful to consult
-the Bash manual page by typing man bash. The search
-commands available within man and other commands can
-be found in the less manual page. Some Bash commands
-have already been discussed in the Command Line Clinic
-series in Issues 2 to 5.
-
-
-Running Bash
-------------
+Запуск Bash
+-----------
 
 When a terminal window is opened a shell interpreter is
 started. The default shell for the current user can be
