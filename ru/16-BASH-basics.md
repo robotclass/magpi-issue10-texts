@@ -26,55 +26,41 @@ Bash (Bourne Again Shell) вот уже на протяжении последн
 
     pi:x:1000:1000:,,,:/home/pi:/bin/bash
 
-Scripts can be run by typing the commands directly into a
-terminal window or by using a shell script text file. A shell
-script file can be run in two ways: by sourcing the script
+Скрипты можно запускать набиря команды непосредственно в окне терминала, и с помощью сценария в текстовом файле. Такой сценарий можно выполнять двумя способами: включая скрипт
 
     source script.sh
 
-which is equivalent to
+это будет то же самое что и 
 
     . script.sh
 
-or by executing the script,
+или выполняя скрипт
 
     ./script.sh
 
-When a file is sourced, it is as if the file was typed into the
-current shell. Any variables which are declared in the
-script remain set when the script finishes. The script also
-has access to all of the variables declared in the current
-shell. In contrast, when a script is executed a new bash
-interpreter session is started. At the end of the bash
-session any local variables are cleaned up.
+Когда файл включается, всё работает так как если бы вы набирали строчки из скрипта вручную в терминале. Любая переменная, объявленная в скрипте, будет доступна после его завершения. Самому скрипту также доступны все переменные, объявленные до него. В противоположность этому, исполнение скрипта происходит в новой сессии, т.е. по завершении все локальные переменные очищаются.
 
-To execute a script, the path to the Bash interpreter should
-be given at the top of the file:
+Чтобы выполнить скрипт, необходимо указать путь к интерпретатору Bash в начале файа:
 
     #!/bin/bash
 
-Then the file should be made executable
+Этот файл должен иметь атрибут исполнимости:
 
     chmod u+x script.sh
 
-Finally, it is possible to type `./script.sh` to execute the script.
+Теперь можно набрать `./script.sh` чтобы запустить скрипт.
 
-Use `nano` (documented in the issue 3 C cave article) to
-create a `hello.sh` file containing:
+Используйте `nano` (описан в выпуске 3 C cave article), чтобы создать файл `hello.sh`:
 
     #!/bin/bash
     # A simple script to print a string.
     echo "In the beginning.."
 
-Then make the file executable and execute the script. The
-echo command prints the string on the screen using the
-standard out. Strings starting with "#" are comments.
-Comments can be added on a separate line or at the end
-of a line.
+Затем сделайте его исполнимым и запустите. Команда `echo` выводит строку на стандартное устройство вывода. Строки, сценария, начинающиеся с `#` являются комментариями. Комментарии можно писать с новой строки, или в конце строки с командой.
 
 
-Pipe operator
--------------
+Канальный оператор
+------------------
 
 A series of commands can be chained together using the
 pipe "|" operator. A pipe has the effect of passing the
