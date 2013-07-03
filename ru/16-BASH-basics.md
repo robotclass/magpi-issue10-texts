@@ -14,18 +14,15 @@ Bash (Bourne Again Shell) вот уже на протяжении последн
 Запуск Bash
 -----------
 
-When a terminal window is opened a shell interpreter is
-started. The default shell for the current user can be
-printed by typing,
+Интерпретатор команд запускается при открытии окна терминала. Узнать оболочку по-умолчанию для текущего пользователя можно командой
 
     echo $SHELL
 
-The default shell is set for each user within `/etc/passwd` or
-via NIS or LDAP. For example,
+Она задаётся для каждого пользователя отдельно в файле `/etc/passwd` или через NIS или LDAP. Например:%
 
     grep pi/etc/passwd
 
-returns
+напечатает
 
     pi:x:1000:1000:,,,:/home/pi:/bin/bash
 
