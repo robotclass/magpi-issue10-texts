@@ -90,7 +90,7 @@ Norman Dunbar
 
     $ mount -t ext4 -o loop, offset=$((122880 * 512)) /BU/Rpi_8gb_backup.img /mnt/root
     $ cd /mnt/root/home/pi
-    $ scp Lost_fi le. txt pi@raspberrypi:
+    $ scp Lost_file.txt pi@raspberrypi:
 После ввода пароля пользователя pi, файл будет копирован в домашнюю папку этого пользователя на вашем Rasberry Pi.
 
 Итак, вы научились подключить и проверять образ резервной копии. И научились извлекать отдельные файлы для восстановления. Что же еще мы можем сделать?
