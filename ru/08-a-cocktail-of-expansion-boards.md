@@ -14,8 +14,10 @@ These are relatively advanced constructional projects and are not recommended fo
 Эти достаточно сложные проекты -- новичкам будет сложно их реализовать. Для них нету готовых наборов. Необходимые электрокомпоненты вам прийдеться искать и заказывать самостоятельно. Но, перечень компонентов и их поставщиков будет известен.
 
 
-Вместе дешевле
+Оптом дешевле
 --------------
+The economics of component purchasing are greatly influenced by the quantities involved. For these projects, participants should be able to achieve substantial savings if they can band together with like-minded individuals through school, Raspberry Jam or other organisations to combine their purchases
+
 Печатные платы и радиодетали обходятся дешевле, если покупать их помногу. Вы можете сэкономить, объединившись с единомышленниками в школе, радиолюбительском кружке или местном сообществе поклонников Raspberry Pi.
 
 
