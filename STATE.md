@@ -7,13 +7,13 @@
 Все статьи 10 номер
 -------------------
 
-![MyImage](https://chart.googleapis.com/chart?chs=500x150&cht=p&chd=t:2,1,4,0,4&chds=a&chl=Английский - 2|Переводится - 1|Переведено - 4|Редакция - 0|Готово - 4&chco=CCCCCC,4DEDFF,00BCD1,EDFF4D,94FF4D)
+![MyImage](https://chart.googleapis.com/chart?chs=500x150&cht=p&chd=t:2,1,3,1,4&chds=a&chl=Английский - 2|Переводится - 1|Переведено - 3|Редакция - 1|Готово - 4&chco=CCCCCC,4DEDFF,00BCD1,EDFF4D,94FF4D)
 
 | Стр| Файл                                        | Состояние   | Пользователь |
 |---:|---------------------------------------------|:-----------:|--------------|
 |  2 | **02-intro.textile**                        | готово      | cube13       |
 |  4 | **04-remote-controlled-robot-cam-part2.md** | готово      | cube13       |
-|  8 | **08-a-cocktail-of-expansion-boards.md**    | переведён   | tabby-cat    |
+|  8 | **08-a-cocktail-of-expansion-boards.md**    | редакция    | cube13       |
 | 11 | **11-this-months-competition.md**           | готово      | cube13       |
 | 12 | **12-backing-up-part-2.md**                   | готово      | cube13       |
 | 16 | *16-BASH-basics.md*                         | переводится | tabby-cat    |
