@@ -16,6 +16,8 @@ Lloyd Seaton
 --------------
 The economics of component purchasing are greatly influenced by the quantities involved. For these projects, participants should be able to achieve substantial savings if they can band together with like-minded individuals through school, Raspberry Jam or other organisations to combine their purchases
 
+Цена на електрокомпоненты очень зависит от их количества при заказе.
+
 Печатные платы и радиодетали обходятся дешевле, если покупать их помногу. Вы можете сэкономить, объединившись с единомышленниками в школе, радиолюбительском кружке или местном сообществе поклонников Raspberry Pi.
 
 
