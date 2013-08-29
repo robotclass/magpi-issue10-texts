@@ -9,8 +9,6 @@ Lloyd Seaton
 * * *
 Предисловие
 --------------
-These are relatively advanced constructional projects and are not recommended for beginners. There are no kits of parts being offered. Instead, participants will need to purchase their own components from their preferred electronic component suppliers. However, lists of components and suggested suppliers will be provided.
-
 Эти достаточно сложные проекты -- новичкам будет сложно их реализовать. Для них нету готовых наборов. Необходимые электрокомпоненты вам прийдеться искать и заказывать самостоятельно. Но, перечень компонентов и их поставщиков будет известен.
 
 
