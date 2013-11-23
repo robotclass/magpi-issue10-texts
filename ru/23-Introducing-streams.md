@@ -1,66 +1,61 @@
-Introducing streams
+Введение в потоки данных
 ===================
 
-Difficulty: MEDIUM
+Сложность: средняя
 
-Alex Kerr, Guest Writer
-
-
-We've covered some of the basics now, and you
-may be starting to notice some similarities
-between C++ and C. From this issue onwards,
-we will be covering what makes C++ and C
-different. For the basics like if statements and
-loops, have a read of The C Cave.
+Алекс Керр
 
 
-Compatibility with C
+Мы уже охватили некоторые основы, и теперь вы м
+ожете найти сходства между C++ и С. С этого номера 
+мы будем искать различия между С++ и С. Прочитайте 
+The C Cave, если хотите узнать об основах: об 
+операторе if и циклах.
+
+
+Совместимость с С
 --------------------
-Several of the standard C library header files are
-accessible from C++. To use them, include them
-as you would any other header, but add a 'c' to
-the front of the name and take away the '.h'. For
-example, the C code:
+Некоторые стандартные заголовочные файлы библиотек 
+С доступны и в С++. Чтобы их использовать, «включите» 
+(include) их обычным способом, но добавьте «c» перед 
+названием и уберите «.h». Например, код в С:
 
     #include <stdlib. h>
     #include <stdio. h>
 
-Becomes the following in C++:
+Становится таким в С++:
 
     #include <cstdlib>
     #include <cstdio>
 
-This will give you access to all the functions
-inside these libraries, such as printf(), and
-rand(), which allows C++ to borrow a lot of useful
-features from C.
+Это даст вам доступ ко всем функциям внутри этих 
+библиотек, таким как printf() и rand(), что помогает 
+С++ использовать полезные функции из С.
 
 
-I/O Streams
+Потоки данных ввода/вывода
 ------------
-Not everything is the same though, as you will
-have noticed. For example, when we were
-outputting, we used cout instead of printf(). This
-is because C++ uses I/O (short for Input/Output)
-streams.
+Однако сходится не все, как вы могли заметить. 
+Например, когда мы выводили данные, мы использовали 
+cout вместо printf(). Это происходит из-за того, 
+что в С++ используются потоки данных I/O (сокращение 
+от Input/Output – ввод/вывод).
 
-What this really means is that the things that
-control input and output are just fancy objects,
-instead of functions. Objects and classes will be
-covered in depth later on, as that is the
-fundamental difference between C and C++.
+Это означает то, что не функции управляют вводом и 
+выводом, а обычные объекты. Объекты и классы мы 
+разберем позднее, так как это существенная разница 
+между С и С++.
 
-There are three main I/O stream headers. These
-are <iostream>, which controls output and input
-to and from the console, <fstream> which is used
-for files, and <sstream>, which is used for
-strings.
+Существуют три основных заголовка для потока I/O: 
+<iostream> отвечает за ввод и вывод в консоли, 
+<fstream> используется для файлов, а <sstream> – 
+для строк.
 
-We already know how <iostream> works, so let
-us look at <fstream>.
+Мы уже знаем, как работает <iostream>, так что давайте 
+посмотрим на <fstream>.
 
 
-Reading and Writing Files
+Чтение и создание файлов
 -------------------------
     #include <iostream>
     #include <fstream>
@@ -68,7 +63,7 @@ Reading and Writing Files
     using namespace std;
     int main()
     {
-    // Create an input file stream named 'reader':
+    // Создайте вводный файловый поток «reader»:
     ifstream reader(“test.txt”);
     while(reader.good())
     {
@@ -80,22 +75,22 @@ Reading and Writing Files
     return 0;
     }
 
-That code allows you to read in a file named
-'test.txt' (in the same directory as the executable)
-and output its contents. You could use the '>>'
-symbol, as we do with cin, but you will find it only
-reads up to a space.
+Этот код позволяет прочитать файл «test.txt» (в той 
+же директории, в которой находится исполняемый модуль) 
+и выводит его содержимое. Вы можете использовать 
+символ «>>», как мы делаем это с cin, но вы обнаружите, 
+что текст будет прочтен только до пробела.
 
-You get this issue with cin as well, so if you're
-trying to get something like a name which needs
-spaces, you could use:
+У вас может возникнуть эта проблема и с cin, поэтому 
+если вы хотите получить название с пробелами, вы можете 
+сделать так:
 
-  getline(cin, variable);
+  ```getline(cin, variable);```
 
-And that will read the whole input and save it to
-'variable', which needs to be a string.
+Введенная информация будет полностью прочитана и 
+сохранена в переменную типа string.
 
-For outputting, we can use it just like cout:
+Для вывода используем:
 
   #include <iostream>
   #include <fstream>
@@ -103,65 +98,63 @@ For outputting, we can use it just like cout:
   using namespace std;
   int main()
   {
-    // Creates an output fi le stream named ' writer' :
+    // Выводит файловый поток «writer»:
     ofstream writer(“test. txt”);
-    // Write some text to the fi le:
+    // Допишите текст к файлу:
     writer << “Hello” << endl;
-    writer << “This is a test fi le” << endl;
-    writer. close();
+    writer << “This is a test file” << endl;
+    writer.close();
     return 0;
   }
 
-This program creates a file named 'test.txt' – in
-the same directory as the executable – with the
-text you see. However, this will overwrite any
-files already there, so be careful!
+Эта программа создаст файл «test.txt» с обработанным 
+текстом в той же директории, в которой находится 
+исполняемый модуль. Однако все файлы в ней будут 
+заменены, так что будьте осторожнее!
 
-To avoid this happening, and to do some other
-interesting things, there are various options we
-can use when making our file stream objects:
+Чтобы избежать этого и сделать кое-что поинтереснее, 
+есть разные опции для создания объектов строчного 
+файла:
 
-    +-------------+------------------------------+----------------------------+
-    |   Option    |         Description          |           Notes            |
-    +-------------+------------------------------+----------------------------+
-    | ios::app    | Appends to an existing file, |                            |
-    |             | instead of overwriting it.   |                            |
-    | ios::in     | Gets input from a file.      | Default when used          |
-    |             |                              | with ifstream(filename)    |
-    | ios::out    | Outputs to a file            | Default when used          |
-    |             |                              | with ofstream(filename)    |
-    | ios::binary | Reads the file in as binary, |                            |
-    |             | instead of text.             |                            |
-    +-------------+------------------------------+----------------------------+
+    +-------------+------------------------------+--------------------------------+
+    |   Опция     |         Описание             |             Примечания         |
+    +-------------+------------------------------+--------------------------------+
+    | ios::app    | Добавляется к существующему  |                                |
+    |             | файлу, не заменяя его.       |                                |
+    | ios::in     | Получает вводные данные из   | По умолчанию, если             |
+    |             | файла.                       | используется ifstream(filename)|
+    | ios::out    | Выводит данные в файл.       | По умолчанию, если             |
+    |             |                              | используется ofstream(filename)|
+    | ios::binary | Читает файл, не как текст,   |                                |
+    |             | а как двоичный код.          |                                |
+    +-------------+------------------------------+--------------------------------+
 
-These can be added as options when you first make the stream. For example:
+Можно добавить следующие опции, если вы сначала создаете поток:
 
-    // Makes a stream that can input and output.
+    // Создайте поток, который может вводить и выводить данные:
     fstream(filename, ios::in, ios::out);
-    // Makes a stream that appends to a file:
+    // Создайте поток, который будет присоединен к файлу:
     ofstream(filename, ios::app);
 
-When a stream is created is it associated with a
-memory buffer. When information is written into
-the stream or read from the stream, information
-is read from or written to the memory. This
-means that if an output file is used, but the file is
-not closed some of the data may not be written to
-the output file. When a file is closed, the any
-information in the associated buffer is flushed to
-the file. While the fstream close function does
-flush the stream, some streams may require
-explicit flushing.
+Когда поток создан, он связывается с буфером памяти. 
+Когда информация вставляется в поток или выходит из 
+него, она точно так же вставляется в буфер или выходит 
+из него. Это означает то, что если файл вывода 
+используется, но он не закрыт, то часть данных может 
+не попасть в файл вывода. Когда файл закрыт, любая 
+информация в связанном буфере, будет удалена. Пока 
+закрытая функция fstream удаляет поток, могут быть 
+значительные потери данных.
 
-C++ streams are said to be "type safe", since
-they can be used to read an input value into a
-type without the need to necessarily use that
-type. In C, this is not the case and sscanf
-functions require projection.
+Потоки в С++ по определению являются «безопасными для
+типа данных», так как они могут прочитать вводное 
+значение, не используя сам тип. В языке С такое 
+невозможно, поэтому обязательно прожектируйте функции 
+sscanf.
 
-Next time we will look at strings and <sstream>,
-allowing you to convert strings to different data
-types. Hopefully you can begin to see how all the
-streams are similar, but suited to their job. Try
-inputting and outputting from files, and see what
-interesting things you could do.
+В следующий раз мы рассмотрим строки и <sstream>, что 
+поможет вам конвертировать строки в другие типы данных. 
+Надеюсь, вы теперь понимаете, насколько похожи все 
+потоки, но при этом каждый предназначен для разных целей. 
+Попробуйте вводить и выводить данные из файлов и посмотрите, 
+что вы можете сделать.
