@@ -7,7 +7,7 @@
 Все статьи 10 номер
 -------------------
 
-![MyImage](https://chart.googleapis.com/chart?chs=500x150&cht=p&chd=t:2,1,3,1,6&chds=a&chl=Английский - 2|Переводится - 1|Переведено - 3|Редакция - 1|Готово - 6&chco=CCCCCC,4DEDFF,00BCD1,EDFF4D,94FF4D)
+![MyImage](https://chart.googleapis.com/chart?chs=500x150&cht=p&chd=t:1,1,2,1,6&chds=a&chl=Английский - 1|Переводится - 1|Переведено - 2|Редакция - 1|Готово - 6&chco=CCCCCC,4DEDFF,00BCD1,EDFF4D,94FF4D)
 
 | Стр| Файл                                        | Состояние   | Пользователь |
 |---:|---------------------------------------------|:-----------:|--------------|
@@ -16,12 +16,12 @@
 |  8 | **08-a-cocktail-of-expansion-boards.md**    | готово    | cube13       |
 | 11 | **11-this-months-competition.md**           | готово      | cube13       |
 | 12 | **12-backing-up-part-2.md**                   | готово      | cube13       |
-| 16 | *16-BASH-basics.md*                         | переводится | tabby-cat    |
+| 16 | *16-BASH-basics.md*                         | переводится | cube13    |
 | 20 | **20-Charm-on-the-Raspberry-Pi.md**         | переведён   | tabby-cat    |
 | 23 | 23-Introducing-streams.md                   |     готово  |              |
 | 26 | 26-The-Scratch-Patch.md                     |             |              |
 | 33 | **33-Parallel-calculations-part-1.md**      | переведён   | tabby-cat    |
-| 36 | **36-Feedback-&-Question-Time.md**          | переведён   | tabby-cat    |
+| 36 | **36-Feedback-&-Question-Time.md**          | редакция   | cube13    |
 
 
 Состояния:
